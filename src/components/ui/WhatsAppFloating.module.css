@@ -1,0 +1,30 @@
+.waFloat {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.waFloat:hover {
+  transform: scale(1.1);
+}
+
+/* Adjust position on mobile to not overlap with the bottom sticky CTA */
+@media (max-width: 768px) {
+  .waFloat {
+    bottom: 90px; /* Above the 70px sticky bar + padding */
+    right: 16px;
+    width: 50px;
+    height: 50px;
+  }
+}

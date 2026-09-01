@@ -1,0 +1,70 @@
+.mobileStickyCta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-top: 1px solid var(--border-strong);
+  z-index: 100;
+  padding: 10px 16px;
+  /* Safe area support for iOS */
+  padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-fast);
+}
+
+.visible {
+  transform: translateY(0);
+}
+
+.hidden {
+  transform: translateY(100%);
+}
+
+@media (min-width: 768px) {
+  .mobileStickyCta {
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px; /* 44px min touch target + some extra */
+  font-size: var(--font-sm);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.primaryBtn {
+  background-color: var(--accent-red);
+  color: #FFFFFF;
+  border: 2px solid var(--accent-red);
+}
+
+.primaryBtn:active {
+  background-color: var(--accent-red-hover);
+}
+
+.secondaryBtn {
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  border: 2px solid var(--text-primary);
+}
+
+.secondaryBtn:active {
+  background-color: var(--bg-secondary);
+}

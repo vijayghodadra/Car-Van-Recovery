@@ -1,0 +1,368 @@
+.bookingSection {
+  background-color: #F7F8FA;
+  padding: 70px 0;
+}
+
+.bookingContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #D71920;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.headline {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.textRed {
+  color: #D71920;
+}
+
+.textGray {
+  color: #888888;
+  font-weight: 400;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  color: #555555;
+  font-weight: 500;
+}
+
+.contentGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .contentGrid {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .contentGrid > div:nth-child(1) {
+    flex: 0 0 54%;
+  }
+
+  .contentGrid > div:nth-child(2) {
+    flex: 0 0 calc(46% - 24px);
+  }
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px; /* Reduced from 28px */
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.iconBoxRed {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #FFF0F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111111;
+}
+
+.cardSub {
+  font-size: 0.85rem;
+  color: #555555;
+  margin-top: 2px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reduced from 20px */
+}
+
+.formRow2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px; /* Reduced from 20px */
+}
+
+@media (min-width: 640px) {
+  .formRow2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 16px;
+  color: #888888;
+  pointer-events: none;
+}
+
+.inputIconTextArea {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: #888888;
+  pointer-events: none;
+}
+
+.inputWrapper input,
+.inputWrapper select,
+.inputWrapper textarea {
+  width: 100%;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 10px 14px 10px 40px; /* Reduced padding */
+  font-size: 0.95rem;
+  color: #111111;
+  background-color: #FDFDFD;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.inputWrapper select {
+  appearance: none;
+}
+
+.inputWrapper input:focus,
+.inputWrapper select:focus,
+.inputWrapper textarea:focus {
+  outline: none;
+  border-color: #D71920;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(215, 25, 32, 0.1);
+}
+
+.inputWrapper input::placeholder,
+.inputWrapper textarea::placeholder {
+  color: #9CA3AF;
+}
+
+.inputWrapper textarea {
+  resize: vertical;
+  min-height: 60px; /* Reduced from 80px */
+}
+
+.formActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btnSubmit,
+.btnWhatsApp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px; /* Reduced from 16px */
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  color: #FFFFFF;
+}
+
+.btnSubmit {
+  background-color: #D71920;
+}
+
+.btnWhatsApp {
+  background-color: #25D366;
+}
+
+.btnSubmit:hover,
+.btnWhatsApp:hover {
+  opacity: 0.92;
+}
+
+/* Right Side - Why Choose Us */
+.whyHeading {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 24px;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Reduced from 12px */
+  margin-bottom: 20px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px; /* Reduced from 16px */
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  background-color: #FFFFFF;
+}
+
+.featureIconOutline {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #FFF0F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.featureText {
+  display: flex;
+  flex-direction: column;
+}
+
+.featureTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.featureDesc {
+  font-size: 0.8rem;
+  color: #555555;
+  margin-top: 2px;
+}
+
+.whatsappCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px; /* Reduced from 16px */
+  border-radius: 12px;
+  border: 1px solid #c2f5d3;
+  background-color: #f0fdf4;
+  margin-bottom: 20px; /* Reduced from 24px */
+}
+
+.waTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #166534;
+}
+
+.waDesc {
+  font-size: 0.8rem;
+  color: #166534;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.phoneCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #D71920;
+  padding: 16px; /* Reduced from 24px */
+  border-radius: 12px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  margin-top: auto;
+}
+
+.phoneCta:hover {
+  opacity: 0.92;
+}
+
+.phoneIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phoneCtaText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phoneNum {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.phoneSub {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 4px;
+  font-weight: 500;
+}

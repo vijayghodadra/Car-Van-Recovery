@@ -1,0 +1,98 @@
+.ctaSection {
+  background: linear-gradient(90deg, #A90008 0%, #E31B23 50%, #A90008 100%);
+  padding: var(--spacing-8) 0; /* Reduced from 16 to 8 */
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaContainer {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaHeadline {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-4);
+  letter-spacing: -0.02em;
+}
+
+.ctaSub {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin-bottom: var(--spacing-6); /* Reduced from 8 to 6 */
+  max-width: 600px;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-4);
+}
+
+.btnCall {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #fff;
+  color: var(--accent-red);
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btnCall:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.btnWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btnWhatsapp:hover {
+  background-color: #1ea952;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.ctaOverlay {
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 60%;
+  height: 200%;
+  background-image: url('/images/hero-wide.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 1;
+  mask-image: linear-gradient(to right, transparent, black);
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
+  pointer-events: none;
+}
