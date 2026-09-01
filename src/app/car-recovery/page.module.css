@@ -208,3 +208,36 @@
 .seoText strong {
   color: var(--text-primary);
 }
+
+@media (max-width: 768px) {
+  .glassStats {
+    width: 92%;
+    padding: var(--spacing-4);
+    gap: var(--spacing-4) var(--spacing-2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 12px;
+  }
+
+  .glassStat {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .glassStatIcon {
+    padding: 6px;
+  }
+
+  .glassStatIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .glassStatTitle {
+    font-size: 0.85rem;
+  }
+
+  .glassStatDesc {
+    font-size: 0.65rem;
+  }
+}
