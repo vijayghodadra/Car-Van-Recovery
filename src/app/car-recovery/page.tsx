@@ -5,11 +5,10 @@ import FAQ from '@/components/ui/FAQ';
 import { businessConfig } from '@/config/business';
 import { Phone, MessageCircle, Clock, ShieldCheck, Truck, ThumbsUp, Wrench, AlertTriangle, Home, Car } from 'lucide-react';
 
-import ServiceFeatureGrid from '@/components/ui/services/ServiceFeatureGrid';
 import ProcessSteps from '@/components/ui/services/ProcessSteps';
 import CoverageSection from '@/components/ui/services/CoverageSection';
 import ImageTextSection from '@/components/ui/services/ImageTextSection';
-import EmergencyCTA from '@/components/ui/services/EmergencyCTA';
+import CarRecoveryServicesGrid from '@/components/ui/services/CarRecoveryServicesGrid';
 
 import styles from './page.module.css';
 
@@ -151,15 +150,7 @@ export default function CarRecoveryPage() {
         </div>
       </section>
 
-      <ServiceFeatureGrid 
-        title="OUR CAR RECOVERY SERVICES"
-        features={[
-          { title: 'Breakdown Recovery', desc: 'Mechanical or electrical failure at the roadside.', iconName: 'Wrench' },
-          { title: 'Accident Recovery', desc: 'Safe retrieval of damaged vehicles.', iconName: 'AlertTriangle' },
-          { title: 'Home Start', desc: 'Assistance if your car won\'t start at home.', iconName: 'Home' },
-          { title: 'Classic Car Transport', desc: 'Careful handling of high-value vehicles.', iconName: 'Car' }
-        ]}
-      />
+      <CarRecoveryServicesGrid />
 
       <ProcessSteps 
         title="HOW CAR RECOVERY WORKS"
@@ -183,10 +174,6 @@ export default function CarRecoveryPage() {
           'Fully comprehensive insurance coverage'
         ]}
       />
-
-
-
-      <EmergencyCTA />
     </>
   );
 }

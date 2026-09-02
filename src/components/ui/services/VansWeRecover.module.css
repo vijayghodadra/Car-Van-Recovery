@@ -1,0 +1,137 @@
+.section {
+  padding: 4rem 0;
+  background-color: #f8fafc;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.highlight {
+  color: #fbbf24;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #334155;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  height: 3px;
+  width: 100px;
+  background-color: #fbbf24;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
+  color: white;
+  padding: 0.75rem 1rem;
+  gap: 0.75rem;
+}
+
+.numberBadge {
+  background-color: #fbbf24;
+  color: #0f172a;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.125rem;
+  border-radius: 4px;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 200px; /* Adjust height based on original image aspect ratio */
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.vanImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.features {
+  background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
+  color: white;
+  padding: 1.25rem 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.checkIcon {
+  color: #fbbf24;
+  flex-shrink: 0;
+  margin-top: 2px;
+}

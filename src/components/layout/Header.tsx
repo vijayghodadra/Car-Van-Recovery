@@ -39,13 +39,13 @@ export default function Header() {
 
   const navLinks = [
     { name: 'HOME', href: '/', icon: Home },
+    { name: 'CAR RECOVERY', href: '/car-recovery', icon: Car },
+    { name: 'VAN RECOVERY', href: '/van-recovery', icon: Truck },
     { 
       name: 'BREAKDOWN RECOVERY SERVICES', 
       href: '/breakdown-recovery',
       icon: Truck,
       subItems: [
-        { name: 'Car Recovery', href: '/car-recovery', icon: Car },
-        { name: 'Van Recovery', href: '/van-recovery', icon: Truck },
         { name: 'LWB Van Recovery', href: '/services/lbw-van-recovery', icon: Navigation },
         { name: 'Jumpstart Service', href: '/services/jumpstart-service', icon: Zap },
         { name: 'Tyre Change', href: '/services/tyre-change', icon: Wrench },
@@ -86,9 +86,15 @@ export default function Header() {
         { name: 'Breakdown Recovery', href: '/stansted-services/breakdown-recovery' },
       ]
     },
-    { name: 'ABOUT US', href: '/about-us', icon: Users },
-    { name: 'REVIEWS', href: '/reviews', icon: Star },
-    { name: 'FAQ', href: '/faq', icon: MessageSquare },
+    { 
+      name: 'ABOUT US', 
+      href: '/about-us', 
+      icon: Users,
+      subItems: [
+        { name: 'Reviews', href: '/reviews', icon: Star },
+        { name: 'FAQ', href: '/faq', icon: MessageSquare },
+      ]
+    },
     { name: 'CONTACT US', href: '/contact', icon: Mail },
   ];
 

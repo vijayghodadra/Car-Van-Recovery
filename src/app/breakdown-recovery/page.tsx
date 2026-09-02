@@ -8,7 +8,6 @@ import { Phone, MessageCircle, Clock, ShieldCheck, Truck, ThumbsUp, Wrench, Aler
 import ServiceCard from '@/components/ui/services/ServiceCard';
 import ServiceFeatureGrid from '@/components/ui/services/ServiceFeatureGrid';
 import ProcessSteps from '@/components/ui/services/ProcessSteps';
-import EmergencyCTA from '@/components/ui/services/EmergencyCTA';
 
 import styles from '../car-recovery/page.module.css';
 
@@ -168,8 +167,6 @@ export default function BreakdownRecovery() {
           { step: '04', title: 'SAFE RECOVERY', desc: 'We fix it or tow it to a safe destination.' }
         ]}
       />
-
-      <EmergencyCTA />
     </>
   );
 }

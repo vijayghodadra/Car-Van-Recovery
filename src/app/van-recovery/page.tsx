@@ -5,8 +5,8 @@ import { businessConfig } from '@/config/business';
 import { Phone, MessageCircle, Clock, ShieldCheck, Truck, ThumbsUp, Wrench, AlertTriangle, Home, Package, Navigation, Tent } from 'lucide-react';
 
 import ServiceFeatureGrid from '@/components/ui/services/ServiceFeatureGrid';
+import VansWeRecover from '@/components/ui/services/VansWeRecover';
 import ProcessSteps from '@/components/ui/services/ProcessSteps';
-import EmergencyCTA from '@/components/ui/services/EmergencyCTA';
 
 import styles from '../car-recovery/page.module.css';
 
@@ -117,15 +117,7 @@ export default function VanRecoveryPage() {
         </div>
       </section>
 
-      <ServiceFeatureGrid 
-        title="VANS WE RECOVER"
-        features={[
-          { title: 'Transit Vans', desc: 'Standard panel and transit vans.', iconName: 'Truck' },
-          { title: 'LWB Vans', desc: 'Long wheelbase and extended chassis.', iconName: 'Navigation' },
-          { title: 'Luton Box Vans', desc: 'High-roof and tail-lift box vans.', iconName: 'Package' },
-          { title: 'Campervans', desc: 'Safe recovery for motorhomes & campers.', iconName: 'Tent' }
-        ]}
-      />
+      <VansWeRecover />
 
       <ProcessSteps 
         title="HOW VAN RECOVERY WORKS"
@@ -136,8 +128,6 @@ export default function VanRecoveryPage() {
           { step: '04', title: 'TRANSPORT', desc: 'We transport you and your cargo safely.' }
         ]}
       />
-
-      <EmergencyCTA />
     </>
   );
 }

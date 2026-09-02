@@ -8,7 +8,6 @@ import { Phone, MessageCircle, Clock, ShieldCheck, Truck, ThumbsUp, PenTool as T
 
 import ServiceFeatureGrid from '@/components/ui/services/ServiceFeatureGrid';
 import ProcessSteps from '@/components/ui/services/ProcessSteps';
-import EmergencyCTA from '@/components/ui/services/EmergencyCTA';
 
 import styles from '../../car-recovery/page.module.css';
 
@@ -151,8 +150,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           steps={service.processSteps}
         />
       )}
-
-      <EmergencyCTA />
     </>
   );
 }
