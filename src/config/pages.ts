@@ -166,12 +166,12 @@ export const services: PageData[] = [
   },
   {
     slug: 'tyre-change-and-repair',
-    name: 'Tyre Change and Repair',
+    name: 'Tyre Change & Tyre Repair Service',
     type: 'service',
     title: 'Mobile Tyre Repair & Change | Car&Van Recovery',
     description: 'Comprehensive mobile tyre services including puncture repairs and complete wheel changes at the roadside.',
-    headline: 'TYRE CHANGE & REPAIR',
-    subheadline: 'Professional roadside tyre repairs and replacements brought directly to you.',
+    headline: 'TYRE CHANGE & TYRE REPAIR SERVICE',
+    subheadline: 'We provide Roadside Assistance Tyre Change & Tyre Repair, we have all Tyre sizes available for every car. Our local Mobile Tyre Team specialises in Roadside & Motorway Tyre Repair & Tyre Change. Across motorway M11 A10 A14 A11 M11 Corridor and Cambridgeshire and Stansted And Harlow.',
     heroImage: '/images/Poster/change tire & repair.png',
     seoContent: {
       title: '24/7 Mobile Tyre Repair & Replacement',
@@ -271,7 +271,7 @@ export const services: PageData[] = [
   },
   {
     slug: 'stansted-tyre-change-and-repair',
-    name: 'Stansted Tyre Change & Repair',
+    name: 'Stansted Tyre Repair & Tyre Change',
     type: 'service',
     title: 'Stansted Mobile Tyre Repair | Car&Van Recovery',
     description: 'Mobile tyre changing and puncture repair services covering Stansted Airport and surrounding areas.',

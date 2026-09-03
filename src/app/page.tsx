@@ -40,7 +40,6 @@ const FadeInWhenVisible = ({ children, delay = 0 }: { children: React.ReactNode,
 };
 
 export default function Home() {
-  const m11Junctions = ['J4', 'J5', 'J6', 'J7', 'J8', 'J9', 'J10', 'J11', 'J12', 'J13', 'J14'];
   const cambridgeLocations = ['Cambridge', 'Trumpington', 'Duxford', 'Sawston', 'Whittlesford', 'Great Shelford', 'Histon', 'Girton', 'Waterbeach'];
   const m11Locations = ['Harlow', 'Bishops Stortford', 'Stansted', 'Saffron Walden', 'Duxford', 'Trumpington', 'Cambridge'];
   const essexHertsLocations = ['Royston', 'Stevenage', 'Letchworth', 'Buntingford', 'Ware', 'Hertford'];
@@ -70,18 +69,22 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className={styles.heroEyebrow}>24/7 VEHICLE RECOVERY</div>
+              <div className={styles.heroEyebrow}>Car & Van Recovery near me Available, Call for free quote</div>
               <h1 className={styles.heroHeadline}>
-                WHEN THE<br />
-                ROAD STOPS,<br />
-                <span className={styles.heroHeadlineRed}>WE DON'T.</span>
+                ROADSIDE ASSISTANCE<br />
+                24 HOUR IN<br />
+                <span className={styles.heroHeadlineRed}>30 MINUTES</span>
               </h1>
-              <p className={styles.heroDesc}>
-                Fast, professional car and van recovery across Cambridge, 
-                the M11 corridor and surrounding areas.
-              </p>
-              
-              <div className={styles.heroActions}>
+              <div className={styles.heroDesc} style={{ marginBottom: '16px' }}>
+                <p style={{ fontWeight: 700, color: 'var(--brand-black)', marginBottom: '8px' }}>
+                  24/7 Car & Van Recovery in Cambridge, M11 & Cambridgeshire
+                </p>
+                <p style={{ fontWeight: 600, color: 'var(--accent-red)', marginBottom: '0' }}>
+                  Fast, Reliable & Affordable Breakdown Recovery – Available 24/7
+                </p>
+              </div>
+
+              <div className={styles.heroActions} style={{ margin: '20px 0 24px 0' }}>
                 <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnPrimaryRed}>
                   <Phone size={20} fill="currentColor" />
                   <div className={styles.btnTextCol}>
@@ -97,42 +100,49 @@ export default function Home() {
                   <ArrowUpRight size={16} />
                 </Link>
               </div>
-            </motion.div>
 
-            {/* Trust Strip inside Hero Content */}
-            <motion.div 
-              className={styles.heroTrustStrip}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <div className={styles.trustItem}>
-                <div className={styles.trustIconCircle}><Clock size={20} /></div>
-                <div className={styles.trustText}>
-                  <span className={styles.trustTitle}>24/7</span>
-                  <span className={styles.trustSub}>Emergency Service</span>
+              {/* Trust Strip directly below Call Buttons */}
+              <div className={styles.heroTrustStrip} style={{ marginTop: '0', marginBottom: '24px' }}>
+                <div className={styles.trustItem}>
+                  <div className={styles.trustIconCircle}><Clock size={20} /></div>
+                  <div className={styles.trustText}>
+                    <span className={styles.trustTitle}>24/7</span>
+                    <span className={styles.trustSub}>Emergency Service</span>
+                  </div>
+                </div>
+                <div className={styles.trustItem}>
+                  <div className={styles.trustIconCircle}><Car size={20} /></div>
+                  <div className={styles.trustText}>
+                    <span className={styles.trustTitle}>Cars & Vans</span>
+                    <span className={styles.trustSub}>All Makes & Models</span>
+                  </div>
+                </div>
+                <div className={styles.trustItem}>
+                  <div className={styles.trustIconCircle}><Navigation size={20} /></div>
+                  <div className={styles.trustText}>
+                    <span className={styles.trustTitle}>M11 Coverage</span>
+                    <span className={styles.trustSub}>J4 - J14</span>
+                  </div>
+                </div>
+                <div className={styles.trustItem}>
+                  <div className={styles.trustIconCircle}><ShieldCheck size={20} /></div>
+                  <div className={styles.trustText}>
+                    <span className={styles.trustTitle}>Fully Insured</span>
+                    <span className={styles.trustSub}>Professional Service</span>
+                  </div>
                 </div>
               </div>
-              <div className={styles.trustItem}>
-                <div className={styles.trustIconCircle}><Car size={20} /></div>
-                <div className={styles.trustText}>
-                  <span className={styles.trustTitle}>Cars & Vans</span>
-                  <span className={styles.trustSub}>All Makes & Models</span>
-                </div>
-              </div>
-              <div className={styles.trustItem}>
-                <div className={styles.trustIconCircle}><Navigation size={20} /></div>
-                <div className={styles.trustText}>
-                  <span className={styles.trustTitle}>M11 Coverage</span>
-                  <span className={styles.trustSub}>J4 - J14</span>
-                </div>
-              </div>
-              <div className={styles.trustItem}>
-                <div className={styles.trustIconCircle}><ShieldCheck size={20} /></div>
-                <div className={styles.trustText}>
-                  <span className={styles.trustTitle}>Fully Insured</span>
-                  <span className={styles.trustSub}>Professional Service</span>
-                </div>
+
+              <div className={styles.heroDesc} style={{ marginBottom: '8px', fontWeight: 600, color: '#111111' }}>
+                <p style={{ marginBottom: '10px' }}>
+                  Looking for <strong style={{ fontWeight: 900, color: '#000000' }}>car recovery near you in Cambridge</strong>? Need <strong style={{ fontWeight: 900, color: '#000000' }}>breakdown recovery on the M11</strong>, <strong style={{ fontWeight: 900, color: '#000000' }}>van recovery on the A14</strong>, or <strong style={{ fontWeight: 900, color: '#000000' }}>roadside assistance near Stansted Airport</strong>?
+                </p>
+                <p style={{ marginBottom: '10px' }}>
+                  <strong style={{ fontWeight: 900, color: 'var(--accent-red)' }}>Car &amp; Van Recovery</strong> provides professional <strong style={{ fontWeight: 900, color: '#000000' }}>24/7 vehicle recovery</strong>, <strong style={{ fontWeight: 900, color: '#000000' }}>car recovery</strong>, <strong style={{ fontWeight: 900, color: '#000000' }}>van recovery</strong> and <strong style={{ fontWeight: 900, color: '#000000' }}>breakdown assistance</strong> from our base in Cambridge.
+                </p>
+                <p style={{ marginBottom: '0' }}>
+                  We cover <strong style={{ fontWeight: 900, color: '#000000' }}>Cambridge and Cambridgeshire</strong>, with specialist coverage along the <strong style={{ fontWeight: 900, color: '#000000' }}>M11 corridor, A14, A10 and A11</strong>, extending towards <strong style={{ fontWeight: 900, color: '#000000' }}>Stansted Airport, Bishop&apos;s Stortford, Harlow</strong> and surrounding areas.
+                </p>
               </div>
             </motion.div>
           </div>
@@ -357,35 +367,7 @@ export default function Home() {
 
       <EmergencyBooking />
 
-      {/* Dedicated M11 Route Section */}
-      <section className={styles.m11Section}>
-        <div className={`container ${styles.m11Container}`}>
-          <FadeInWhenVisible>
-            <div className={styles.m11Header}>
-              <h2 className={styles.m11Title}>
-                <span className={styles.textRed}>M11</span> VEHICLE RECOVERY
-              </h2>
-              <p className={styles.m11Desc}>
-                Rapid emergency recovery across the entire M11 corridor.
-              </p>
-            </div>
-          </FadeInWhenVisible>
 
-          <div className={styles.routeVisual}>
-            <div className={styles.routeLineHorizontal}></div>
-            <div className={styles.routeNodesContainer}>
-              {m11Junctions.map((j, idx) => (
-                <FadeInWhenVisible key={j} delay={idx * 0.05}>
-                  <Link href={`/m11-recovery/junction-${j.replace('J', '')}`} className={styles.routeNodeBlock}>
-                    <div className={styles.routeDotHorizontal}></div>
-                    <span className={styles.routeJunctionText}>{j}</span>
-                  </Link>
-                </FadeInWhenVisible>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       {/* Dedicated Cambridge Section */}

@@ -6,7 +6,7 @@ import { businessConfig } from '@/config/business';
 import styles from '../stansted.module.css';
 
 export const metadata: Metadata = {
-  title: 'Stansted Tyre Change & Repair | 24/7 Mobile Tyre Assistance',
+  title: 'Stansted Tyre Repair & Tyre Change | 24/7 Mobile Tyre Assistance',
   description: 'Need a tyre change or repair near Stansted? Professional roadside tyre assistance for cars and vans across Stansted and surrounding areas.',
   alternates: {
     canonical: '/stansted-services/tyre-change-repair',
@@ -55,7 +55,7 @@ export default function StanstedTyreChangePage() {
             <ChevronRight size={14} />
             <span>Stansted Services</span>
             <ChevronRight size={14} />
-            <span style={{ fontWeight: 600, color: 'var(--accent-red)' }}>Stansted Tyre Change & Repair</span>
+            <span style={{ fontWeight: 600, color: 'var(--accent-red)' }}>Stansted Tyre Repair & Tyre Change</span>
           </div>
         </div>
 

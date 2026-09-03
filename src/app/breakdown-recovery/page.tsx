@@ -53,8 +53,9 @@ export default function BreakdownRecovery() {
                 <AlertTriangle size={16} /> 24/7 BREAKDOWN RECOVERY
               </div>
               <h1 className={styles.title}>
-                FAST. RELIABLE.<br/>
-                <span>ALWAYS THERE.</span>
+                ROADSIDE ASSISTANCE<br/>
+                24 HOUR IN<br/>
+                <span style={{ color: 'var(--accent-red)' }}>30 MINUTES</span>
               </h1>
               <p className={styles.description}>
                 Professional breakdown recovery across Cambridge, the M11 corridor and surrounding areas. We are available 24/7 to get you back on the road safely.

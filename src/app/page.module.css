@@ -6,12 +6,11 @@
 /* Hero Section */
 .hero {
   position: relative;
-  /* Use a smaller min-height so the overall section isn't too tall */
-  min-height: 500px;
-  padding-top: 100px; /* Push content down slightly from header */
+  min-height: auto;
+  padding-top: 96px; /* Push content down slightly from header */
   display: flex;
   align-items: flex-start;
-  padding-bottom: 80px; 
+  padding-bottom: 24px; 
 }
 
 .heroBackgroundWrapper {
@@ -49,16 +48,17 @@
 
 /* Hero Left Content */
 .heroContent {
-  max-width: 600px; /* Restrict width so it stays on the white gradient part */
+  max-width: 680px; /* Restrict width so it stays on the white gradient part */
   display: flex;
   flex-direction: column;
 }
 
 .heroEyebrow {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 800;
   color: var(--accent-red);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   margin-bottom: var(--spacing-4);
 }
 
@@ -76,11 +76,11 @@
 }
 
 .heroDesc {
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   color: var(--text-secondary);
-  max-width: 450px;
+  max-width: 640px;
   margin-bottom: var(--spacing-8);
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 500;
 }
 

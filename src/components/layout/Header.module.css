@@ -18,9 +18,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
-  max-width: 1400px;
-  padding: 0 24px;
+  height: 74px;
+  max-width: 1440px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -38,11 +38,14 @@
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  width: 140px; /* Constrain width as requested */
+  width: 140px;
 }
 
 .logoIcon {
-  color: var(--accent-red);
+  fill: #D71920;
+  color: #D71920;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
 }
 
@@ -60,7 +63,7 @@
 }
 
 .logoAmpersand {
-  color: var(--accent-red);
+  color: #D71920;
 }
 
 .logoBottom {
@@ -75,7 +78,7 @@
   width: 1px;
   height: 40px;
   background-color: var(--border-subtle);
-  margin-left: 20px;
+  margin-left: 16px;
 }
 
 @media (min-width: 1024px) {
@@ -95,10 +98,11 @@
   .desktopNav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex: 1;
-    gap: clamp(16px, 1.5vw, 32px); /* Responsive gap */
+    gap: clamp(4px, 1vw, 20px);
     height: 100%;
+    margin: 0 12px;
   }
 }
 
@@ -106,6 +110,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
 }
 
@@ -114,68 +119,84 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  color: var(--brand-black);
+  gap: 4px;
+  color: #111111;
   text-decoration: none;
   height: 100%;
-  transition: color 250ms ease;
+  padding: 6px 2px;
+  transition: color 200ms ease;
   position: relative;
 }
 
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+}
+
 .navMainIcon {
-  color: var(--text-primary);
-  transition: color 250ms ease;
+  width: 22px;
+  height: 22px;
+  fill: #D71920;
+  color: #D71920;
+  flex-shrink: 0;
 }
 
 .navLabelWrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  gap: 4px;
+  gap: 3px;
 }
 
-.navLabelText {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+.navLabelTextStack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.15;
+  color: #111111;
+  text-transform: uppercase;
 }
 
 .dropdownIcon {
-  color: var(--text-secondary);
+  color: #111111;
+  margin-top: 1px;
+  flex-shrink: 0;
 }
 
 /* Hover & Active States */
-.navLink:hover {
-  color: var(--accent-red);
-}
-
-.navLink:hover .navMainIcon {
-  color: var(--accent-red);
+.navLink:hover .navLabelTextStack {
+  color: #D71920;
 }
 
 .navLink:hover .dropdownIcon {
-  color: var(--accent-red);
+  color: #D71920;
 }
 
-.navLinkActive {
-  color: var(--accent-red);
+.navLinkActive .navLabelTextStack {
+  color: #D71920;
 }
 
-.navLinkActive .navMainIcon {
-  color: var(--accent-red);
+.navLinkActive .dropdownIcon {
+  color: #D71920;
 }
 
 .navLinkActive::after {
   content: '';
   position: absolute;
-  bottom: 12px;
+  bottom: 6px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent-red);
+  width: 32px;
+  height: 2.5px;
+  background-color: #D71920;
+  border-radius: 1px;
 }
 
 /* =========================================
@@ -187,7 +208,7 @@
   left: 50%;
   transform: translateX(-50%) translateY(10px);
   background-color: #ffffff;
-  min-width: 280px;
+  min-width: 260px;
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
@@ -211,7 +232,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 16px;
+  padding: 10px 14px;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -221,13 +242,13 @@
 }
 
 .dropdownItemIcon {
-  color: var(--accent-red);
+  color: #D71920;
   flex-shrink: 0;
 }
 
 .dropdownItem:hover {
   background-color: var(--accent-red-soft);
-  color: var(--accent-red);
+  color: #D71920;
 }
 
 
@@ -242,7 +263,7 @@
   .desktopCta {
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 8px;
   }
 }
 
@@ -250,22 +271,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  background-color: var(--accent-red);
+  gap: 10px;
+  background-color: #D71920;
   color: #fff;
-  padding: 0 20px;
-  height: 50px; /* 45-55px as requested */
-  min-width: 150px; /* 145-160px as requested */
+  padding: 0 18px;
+  height: 46px;
+  min-width: 145px;
   border-radius: 8px;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(227, 27, 35, 0.2);
+  box-shadow: 0 4px 12px rgba(215, 25, 32, 0.2);
   transition: all 200ms ease;
 }
 
 .callButton:hover {
-  background-color: var(--accent-dark-red);
+  background-color: #b71319;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(227, 27, 35, 0.3);
+  box-shadow: 0 6px 16px rgba(215, 25, 32, 0.3);
 }
 
 .callIcon {
@@ -288,7 +309,7 @@
 }
 
 .callNumber {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: white;
   letter-spacing: -0.02em;
@@ -356,7 +377,10 @@
 }
 
 .mobileNavLinkIcon {
-  color: var(--text-primary);
+  color: #D71920;
+  fill: #D71920;
+  width: 20px;
+  height: 20px;
 }
 
 .mobileDropdown {
