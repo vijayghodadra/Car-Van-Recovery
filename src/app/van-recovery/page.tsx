@@ -11,8 +11,8 @@ import ProcessSteps from '@/components/ui/services/ProcessSteps';
 import styles from '../car-recovery/page.module.css';
 
 export const metadata: Metadata = {
-  title: '24/7 Heavy Van Recovery Cambridge | Commercial Vehicle Towing',
-  description: 'Specialist 24/7 heavy-duty van recovery for commercial vehicles, transits, and LWB vans across Cambridge, the M11, and Stansted. Fast dispatch, call now.',
+  title: '24/7 Van Recovery Cambridge | Van Recovery Near Me',
+  description: 'Specialist 24/7 van recovery for commercial vehicles, transits, and LWB vans across Cambridge, the M11, and Stansted. Fast dispatch, call now.',
   alternates: {
     canonical: '/van-recovery',
   }
@@ -34,7 +34,7 @@ export default function VanRecoveryPage() {
         <div className={styles.heroBg}>
           <Image 
             src="/images/car_towing_truck.jpg"
-            alt="Commercial Van Recovery Tow Truck in Cambridge"
+            alt="Van Recovery Tow Truck in Cambridge"
             fill
             priority
             style={{ objectFit: 'cover' }}
@@ -47,23 +47,34 @@ export default function VanRecoveryPage() {
             
             <div className={styles.heroText}>
               <div className={styles.eyebrow}>
-                <Truck size={16} /> COMMERCIAL RECOVERY EXPERTS
+                <Truck size={16} /> VAN RECOVERY EXPERTS
               </div>
               <h1 className={styles.title}>
-                COMMERCIAL<br/>
-                <span>VAN RECOVERY</span>
+                VAN RECOVERY<br/>
+                <span>NEAR ME</span>
               </h1>
-              <p className={styles.description}>
-                Getting your business back on the road safely and quickly. We specialize in towing transit vans, LWB, and heavy commercial vehicles across Cambridge and the M11, 24/7.
-              </p>
-              
-              <div className={styles.buttons}>
+              <div className={styles.buttons} style={{ marginBottom: '1.5rem' }}>
                 <a href={phoneUrl} className={styles.btnPrimary}>
                   <Phone size={20} /> CALL NOW
                 </a>
                 <a href={whatsappUrl} className={styles.btnWhatsapp}>
                   <MessageCircle size={20} /> WHATSAPP US
                 </a>
+              </div>
+
+              <div className={styles.description}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--accent-red)', marginBottom: '0.75rem' }}>
+                  Van Recovery &amp; Roadside Assistance in Cambridge – 24/7
+                </h3>
+                <p style={{ color: '#ffffff', fontWeight: '600', marginBottom: '0.75rem' }}>
+                  Need van recovery near you in Cambridge? We provide fast, reliable 24/7 van breakdown recovery and roadside assistance across Cambridge, the M11 and surrounding areas.
+                </p>
+                <p style={{ color: '#ffffff', fontWeight: '600', marginBottom: '0.75rem' }}>
+                  Whether you’ve broken down at the roadside, your van won’t start, you’ve had a puncture, or you need a vehicle transported to a garage, our van recovery service is available day and night to get you safely back on the road.
+                </p>
+                <p style={{ color: '#ffffff', fontWeight: '600' }}>
+                  We specialise in recovering Ford Transit vans, LWB vans, long-wheelbase vehicles and heavy commercial vehicles, with the equipment and experience to handle everything from small vans to larger commercial vehicles.
+                </p>
               </div>
             </div>
 
@@ -106,7 +117,7 @@ export default function VanRecoveryPage() {
       <section className={styles.seoSection}>
         <div className="container">
           <div className={styles.seoContent}>
-            <h2 className={styles.seoTitle}>Heavy-Duty Van Recovery in Cambridge</h2>
+            <h2 className={styles.seoTitle}>Van Recovery in Cambridge</h2>
             <p className={styles.seoText}>
               When your commercial vehicle breaks down, your business grinds to a halt. We provide specialist <strong>commercial van recovery in Cambridge</strong> designed to handle the weight and dimensions of fully loaded trade vehicles, transit vans, and Luton boxes.
             </p>

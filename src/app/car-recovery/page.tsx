@@ -83,20 +83,34 @@ export default function CarRecoveryPage() {
                 <Car size={16} /> CAR RECOVERY SPECIALISTS
               </div>
               <h1 className={styles.title}>
-                FAST & RELIABLE<br/>
-                <span>CAR RECOVERY</span>
+                CAR RECOVERY<br/>
+                <span>NEAR ME</span>
               </h1>
-              <p className={styles.description}>
-                Professional emergency car recovery when you need it most. Our fleet is equipped to handle all types of cars, from everyday runners to high-value classic vehicles, 24/7.
-              </p>
-              
-              <div className={styles.buttons}>
+              <div className={styles.buttons} style={{ marginBottom: '1.5rem' }}>
                 <a href={phoneUrl} className={styles.btnPrimary}>
                   <Phone size={20} /> CALL NOW
                 </a>
                 <a href={whatsappUrl} className={styles.btnWhatsapp}>
                   <MessageCircle size={20} /> WHATSAPP US
                 </a>
+              </div>
+
+              <div className={styles.description}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--accent-red)', marginBottom: '0.75rem' }}>
+                  Car Recovery &amp; Roadside Assistance in Cambridge – 24/7
+                </h3>
+                <p style={{ color: '#ffffff', fontWeight: '600', marginBottom: '0.75rem' }}>
+                  Need car recovery near you in Cambridge? We provide fast, reliable 24/7 car breakdown recovery and roadside assistance across Cambridge, the M11 and surrounding areas.
+                </p>
+                <p style={{ color: '#ffffff', fontWeight: '600', marginBottom: '0.75rem' }}>
+                  Whether your car has broken down, won’t start, has a flat tyre, has been involved in an accident, or simply needs transporting to a garage, our 24-hour car recovery service is available day and night to get you and your vehicle to a safe location.
+                </p>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--accent-red)', marginBottom: '0.75rem', marginTop: '1rem' }}>
+                  Car Breakdown? Get Help 24/7
+                </h3>
+                <p style={{ color: '#ffffff', fontWeight: '600' }}>
+                  Don’t stay stranded. If you need car recovery in Cambridge, roadside assistance on the M11, or 24-hour vehicle recovery near you, contact us today.
+                </p>
               </div>
             </div>
 

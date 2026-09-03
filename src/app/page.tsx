@@ -85,13 +85,22 @@ export default function Home() {
               </div>
 
               <div className={styles.heroActions} style={{ margin: '20px 0 24px 0' }}>
-                <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnPrimaryRed}>
-                  <Phone size={20} fill="currentColor" />
-                  <div className={styles.btnTextCol}>
-                    <span className={styles.btnLabel}>CALL NOW</span>
-                    <span className={styles.btnSub}>{businessConfig.phone}</span>
-                  </div>
-                </a>
+                <div className={styles.callButtonWrapper}>
+                  <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnPrimaryRed}>
+                    <Phone size={20} fill="currentColor" />
+                    <div className={styles.btnTextCol}>
+                      <span className={styles.btnLabel}>CALL NOW</span>
+                      <span className={styles.btnSub}>{businessConfig.phone}</span>
+                    </div>
+                  </a>
+                  <Image 
+                    src="/images/Dear.png" 
+                    alt="Dear" 
+                    width={110} 
+                    height={110} 
+                    className={styles.heroDeerImg} 
+                  />
+                </div>
                 <Link href="/contact" className={styles.btnSecondaryOutline}>
                   <div className={styles.targetIconWrapper}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="2"></circle><path d="m22 12-3 0"></path><path d="m5 12-3 0"></path><path d="m12 5 0-3"></path><path d="m12 22 0-3"></path></svg>

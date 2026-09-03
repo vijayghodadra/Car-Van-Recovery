@@ -91,6 +91,32 @@
   margin-bottom: var(--spacing-6); /* Tightened space between buttons and trust strip */
 }
 
+.callButtonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.heroDeerImg {
+  object-fit: contain;
+  margin-top: -45px;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .callButtonWrapper {
+    width: auto;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .heroDeerImg {
+    margin-top: -10px;
+    margin-left: 0;
+  }
+}
+
 .btnPrimaryRed {
   display: inline-flex;
   align-items: center;
