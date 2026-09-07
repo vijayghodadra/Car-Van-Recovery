@@ -20,7 +20,8 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const service = services.find(s => s.slug === slug);
+  const normalizedSlug = slug.replace(/_/g, '-');
+  const service = services.find(s => s.slug === slug || s.slug === normalizedSlug);
   if (!service) return {};
 
   return {
@@ -34,7 +35,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = services.find(s => s.slug === slug);
+  const normalizedSlug = slug.replace(/_/g, '-');
+  const service = services.find(s => s.slug === slug || s.slug === normalizedSlug);
   
   if (!service) {
     notFound();
@@ -54,7 +56,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className={styles.heroSection}>
         <div className={styles.heroBg}>
           <Image 
-            src="/images/car_towing_truck.jpg"
+            src={service.heroImage || "/images/jumpstart_battery_action.jpg"}
             alt={`${service.name} in Cambridge`}
             fill
             priority

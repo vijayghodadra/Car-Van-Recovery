@@ -346,7 +346,7 @@ export default function Home() {
                 iconBgColor: '#eefcf1',
                 iconColor: '#16a34a',
                 description: 'Fast roadside jump start and tyre change assistance.',
-                imageSrc: '/images/jumpstart.jpg',
+                imageSrc: '/images/jumpstart_battery_action.jpg',
                 imageAlt: 'Jump Start and Tyre Change',
               },
               {

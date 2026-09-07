@@ -70,7 +70,7 @@
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 900;
   line-height: 1.1;
-  color: var(--brand-black);
+  color: #ffffff;
   margin-bottom: 24px;
   letter-spacing: -0.02em;
 }
@@ -78,7 +78,7 @@
 .heroDesc {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 40px;
   max-width: 600px;
 }
@@ -268,6 +268,86 @@
 .cardDesc {
   color: var(--text-secondary);
   line-height: 1.6;
+}
+
+/* =========================================
+   GOOGLE VERIFIED REVIEW CARD
+   ========================================= */
+.googleReviewCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.googleReviewCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.googleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.verifiedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #16a34a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.starRow {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 16px;
+}
+
+.reviewQuoteText {
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+
+.googleFooter {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.authorName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.authorLocation {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin: 0;
+  text-align: right;
+}
+
+.authorDate {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  text-align: right;
+  margin-top: 2px;
 }
 
 /* =========================================

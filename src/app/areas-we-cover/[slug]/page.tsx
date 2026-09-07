@@ -71,7 +71,7 @@ export default async function LocationPage({ params }: { params: { slug: string 
     'stevenage': '/images/breakdown.jpg',
     'bishops-stortford': '/images/hero.jpg',
     'stansted-airport': '/images/classic.jpg',
-    'haverhill': '/images/jumpstart.jpg',
+    'haverhill': '/images/jumpstart_battery_action.jpg',
     'cambridge': '/images/cambridge.jpg',
     'cambridgeshire': '/images/hero-wide.jpg',
     'newmarket': '/images/cta.jpg',
@@ -280,7 +280,7 @@ export default async function LocationPage({ params }: { params: { slug: string 
             {/* Card 3 */}
             <div className={styles.serviceCard}>
               <div className={styles.serviceCardImgWrap}>
-                <Image src="/images/Poster/Jumpstart Service.png" alt="Non-Starter Recovery" fill style={{ objectFit: 'cover' }} />
+                <Image src="/images/jumpstart_battery_action.jpg" alt="Non-Starter Recovery" fill style={{ objectFit: 'cover' }} />
               </div>
               <div className={styles.serviceCardContent}>
                 <div className={styles.serviceIconWrap}>

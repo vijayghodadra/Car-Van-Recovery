@@ -33,7 +33,7 @@ export default function VanRecoveryPage() {
       <section className={styles.heroSection}>
         <div className={styles.heroBg}>
           <Image 
-            src="/images/car_towing_truck.jpg"
+            src="/images/van_recovery_hero.jpg"
             alt="Van Recovery Tow Truck in Cambridge"
             fill
             priority

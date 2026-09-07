@@ -63,7 +63,7 @@ export default function StanstedJumpstartPage() {
         <section className={styles.hero}>
           <div className={styles.heroBg}>
             <Image 
-              src="/images/Poster/Jumpstart Service.png"
+              src="/images/jumpstart_battery_action.jpg"
               alt="Professional roadside technician performing a jump start on a vehicle near Stansted Airport"
               fill
               priority

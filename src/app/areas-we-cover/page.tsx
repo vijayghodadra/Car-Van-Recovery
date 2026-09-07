@@ -293,7 +293,7 @@ export default function AreasWeCoverPage() {
             {/* Card 3 */}
             <div className={styles.serviceCard}>
               <div className={styles.serviceCardImgWrap}>
-                <Image src="/images/Poster/Jumpstart Service.png" alt="Non-Starter Recovery" fill style={{ objectFit: 'cover' }} />
+                <Image src="/images/jumpstart_battery_action.jpg" alt="Non-Starter Recovery" fill style={{ objectFit: 'cover' }} />
               </div>
               <div className={styles.serviceCardContent}>
                 <div className={styles.serviceIconWrap}>

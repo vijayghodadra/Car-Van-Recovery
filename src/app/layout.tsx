@@ -19,6 +19,14 @@ export const metadata: Metadata = {
   description: defaultSEO.description,
   openGraph: defaultSEO.openGraph,
   twitter: defaultSEO.twitter,
+  icons: {
+    icon: [
+      { url: '/images/Dear.png' },
+      { url: '/icon.png' },
+    ],
+    shortcut: '/images/Dear.png',
+    apple: '/images/Dear.png',
+  },
   robots: {
     index: true,
     follow: true,

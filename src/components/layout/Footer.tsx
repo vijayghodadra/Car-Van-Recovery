@@ -28,6 +28,9 @@ const InstagramIcon = ({ size = 16 }) => (
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const phoneClean = businessConfig.phone.replace(/[\s+]/g, '');
+  const phoneUrl = `tel:${businessConfig.phone.replace(/\s/g, '')}`;
+  const waUrl = `https://wa.me/${phoneClean}?text=${encodeURIComponent('Hi, I need emergency car/van recovery assistance.')}`;
 
   return (
     <footer className={styles.footerWrapper}>
@@ -51,15 +54,15 @@ export default function Footer() {
           </div>
           
           <div className={styles.redCtaCenter}>
-            <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.redCtaPhoneRow}>
+            <a href={phoneUrl} className={styles.redCtaPhoneRow}>
               <Phone size={28} className={styles.redCtaPhoneIcon} />
               <span className={styles.redCtaPhoneNum}>{businessConfig.phone}</span>
             </a>
             <div className={styles.redCtaButtonsRow}>
-              <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.redCtaBtnCall}>
+              <a href={phoneUrl} className={styles.redCtaBtnCall}>
                 <Phone size={16} /> Call Now
               </a>
-              <a href={`https://wa.me/${businessConfig.phone.replace(/\s/g, '').replace('+', '')}`} className={styles.redCtaBtnWhatsapp}>
+              <a href={waUrl} target="_blank" rel="noopener noreferrer" className={styles.redCtaBtnWhatsapp}>
                 <MessageCircle size={16} /> WhatsApp Us
               </a>
             </div>
@@ -79,7 +82,7 @@ export default function Footer() {
             {/* Column 1: Brand */}
             <div className={styles.brandCol}>
               <div className={styles.logoText}>
-                <span className={styles.logoMain}>CAR<span className={styles.textRed}>&</span>VAN</span>
+                <span className={styles.logoMain}>CAR<span className={styles.textRed}>&amp;</span>VAN</span>
                 <span className={styles.logoSub}>RECOVERY</span>
               </div>
               <p className={styles.brandDesc}>
@@ -109,11 +112,11 @@ export default function Footer() {
                 <li><Link href="/car-recovery"><ChevronRight size={14} className={styles.navIcon} /> Car Recovery</Link></li>
                 <li><Link href="/van-recovery"><ChevronRight size={14} className={styles.navIcon} /> Van Recovery</Link></li>
                 <li><Link href="/breakdown-recovery"><ChevronRight size={14} className={styles.navIcon} /> Breakdown Recovery</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> Accident Recovery</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> Mobile Tyre Service</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> Jump Starts</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> Auction Collection</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> Garage Collection</Link></li>
+                <li><Link href="/breakdown-recovery"><ChevronRight size={14} className={styles.navIcon} /> Accident Recovery</Link></li>
+                <li><Link href="/services/tyre-change-and-repair"><ChevronRight size={14} className={styles.navIcon} /> Mobile Tyre Service</Link></li>
+                <li><Link href="/services/jumpstart-service"><ChevronRight size={14} className={styles.navIcon} /> Jump Starts</Link></li>
+                <li><Link href="/services/auction-and-garage-collection"><ChevronRight size={14} className={styles.navIcon} /> Auction Collection</Link></li>
+                <li><Link href="/services/auction-and-garage-collection"><ChevronRight size={14} className={styles.navIcon} /> Garage Collection</Link></li>
               </ul>
             </div>
 
@@ -121,13 +124,13 @@ export default function Footer() {
             <div className={styles.navCol}>
               <h4 className={styles.navTitle}>COVERAGE AREA</h4>
               <ul className={styles.navList}>
-                <li><Link href="/vehicle-recovery/cambridge"><ChevronRight size={14} className={styles.navIcon} /> Cambridge</Link></li>
-                <li><Link href="/m11-recovery"><ChevronRight size={14} className={styles.navIcon} /> M11 Motorway</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> Huntingdon</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> Royston</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> St Neots</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> Newmarket</Link></li>
-                <li><Link href="/cambridge-vehicle-recovery"><ChevronRight size={14} className={styles.navIcon} /> All Locations</Link></li>
+                <li><Link href="/areas-we-cover/cambridge"><ChevronRight size={14} className={styles.navIcon} /> Cambridge</Link></li>
+                <li><Link href="/areas-we-cover/m11"><ChevronRight size={14} className={styles.navIcon} /> M11 Motorway</Link></li>
+                <li><Link href="/areas-we-cover/huntingdon"><ChevronRight size={14} className={styles.navIcon} /> Huntingdon</Link></li>
+                <li><Link href="/areas-we-cover/stevenage"><ChevronRight size={14} className={styles.navIcon} /> Stevenage</Link></li>
+                <li><Link href="/areas-we-cover/st-neots"><ChevronRight size={14} className={styles.navIcon} /> St Neots</Link></li>
+                <li><Link href="/areas-we-cover/newmarket"><ChevronRight size={14} className={styles.navIcon} /> Newmarket</Link></li>
+                <li><Link href="/areas-we-cover"><ChevronRight size={14} className={styles.navIcon} /> All Locations</Link></li>
               </ul>
             </div>
 
@@ -135,16 +138,14 @@ export default function Footer() {
             <div className={styles.navCol}>
               <h4 className={styles.navTitle}>COMPANY</h4>
               <ul className={styles.navList}>
-                <li><Link href="/about"><ChevronRight size={14} className={styles.navIcon} /> About Us</Link></li>
+                <li><Link href="/about-us"><ChevronRight size={14} className={styles.navIcon} /> About Us</Link></li>
                 <li><Link href="/contact"><ChevronRight size={14} className={styles.navIcon} /> Contact Us</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> FAQs</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> Privacy Policy</Link></li>
-                <li><Link href="#"><ChevronRight size={14} className={styles.navIcon} /> Terms & Conditions</Link></li>
+                <li><Link href="/faq"><ChevronRight size={14} className={styles.navIcon} /> FAQs</Link></li>
+                <li><Link href="/reviews"><ChevronRight size={14} className={styles.navIcon} /> Reviews</Link></li>
               </ul>
             </div>
 
           </div>
-
 
         </div>
 
@@ -152,14 +153,13 @@ export default function Footer() {
         <div className={styles.footerBottomBar}>
           <div className={`container ${styles.bottomBarContainer}`}>
             <div className={styles.copyright}>
-              © {currentYear} <span className={styles.textRed}>Car&Van Recovery.</span> All rights reserved.
+              © {currentYear} <span className={styles.textRed}>Car&amp;Van Recovery.</span> All rights reserved.
             </div>
 
             <div className={styles.socials}>
               <span>Follow Us:</span>
-              <a href="#" className={styles.socialLink}><FacebookIcon size={16} /></a>
-              <a href="#" className={styles.socialLink}><InstagramIcon size={16} /></a>
-              <a href="#" className={styles.socialLink}><MessageCircle size={16} /></a>
+              <a href={phoneUrl} className={styles.socialLink} aria-label="Call Us"><Phone size={16} /></a>
+              <a href={waUrl} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="WhatsApp Us"><MessageCircle size={16} /></a>
             </div>
           </div>
         </div>

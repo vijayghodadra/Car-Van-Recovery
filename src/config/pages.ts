@@ -77,7 +77,7 @@ export const services: PageData[] = [
     description: 'Fast battery jumpstart services. Stranded with a flat battery? We dispatch immediately to get your engine running.',
     headline: 'JUMPSTART SERVICE',
     subheadline: 'Dead battery? Our jumpstart service can get you moving again safely and quickly.',
-    heroImage: '/images/Poster/Jumpstart Service.png',
+    heroImage: '/images/jumpstart_battery_action.jpg',
     seoContent: {
       title: '24/7 Emergency Jumpstart Service in Cambridge',
       paragraphs: [
