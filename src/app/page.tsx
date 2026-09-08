@@ -50,9 +50,9 @@ export default function Home() {
       <section className={styles.hero}>
         {/* Full width background image */}
         <div className={styles.heroBackgroundWrapper}>
-           <Image 
-            src="/images/hero-wide.jpg" 
-            alt="UK Vehicle Recovery Truck" 
+          <Image
+            src="/images/hero-wide.jpg"
+            alt="UK Vehicle Recovery Truck"
             fill
             priority
             style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -77,7 +77,7 @@ export default function Home() {
               </h1>
               <div className={styles.heroDesc} style={{ marginBottom: '16px' }}>
                 <p style={{ fontWeight: 700, color: 'var(--brand-black)', marginBottom: '8px' }}>
-                  24/7 Car & Van Recovery in Cambridge, M11 & Cambridgeshire
+                  24 Hour Car & Van Recovery Near Me from Cambridge, Stansted, Harlow and London M11 Corridor
                 </p>
                 <p style={{ fontWeight: 600, color: 'var(--accent-red)', marginBottom: '0' }}>
                   Fast, Reliable & Affordable Breakdown Recovery – Available 24/7
@@ -93,12 +93,12 @@ export default function Home() {
                       <span className={styles.btnSub}>{businessConfig.phone}</span>
                     </div>
                   </a>
-                  <Image 
-                    src="/images/Dear.png" 
-                    alt="Dear" 
-                    width={110} 
-                    height={110} 
-                    className={styles.heroDeerImg} 
+                  <Image
+                    src="/images/Dear.png"
+                    alt="Dear"
+                    width={110}
+                    height={110}
+                    className={styles.heroDeerImg}
                   />
                 </div>
                 <Link href="/contact" className={styles.btnSecondaryOutline}>
@@ -188,7 +188,7 @@ export default function Home() {
       {/* Services Grid (Overlapping Hero) */}
       <section className={styles.servicesSection}>
         <div className={`container ${styles.servicesGrid}`}>
-          
+
           <FadeInWhenVisible delay={0.1}>
             <div className={styles.serviceCard}>
               <div className={styles.serviceCardContent}>
@@ -243,7 +243,7 @@ export default function Home() {
       {/* How It Works & Bottom CTA (Single Row Layout) */}
       <section className={styles.bottomSection}>
         <div className={`container ${styles.bottomContainer}`}>
-          
+
           {/* Left Header */}
           <div className={styles.howItWorksHeader}>
             <div className={styles.howEyebrow}>HOW IT WORKS</div>
@@ -259,11 +259,11 @@ export default function Home() {
             </div>
             <div className={styles.stepContent}>
               <h4 className={styles.stepTitle}>CALL US</h4>
-              <p className={styles.stepDesc}>Get in touch 24/7.<br/>We're ready to help.</p>
+              <p className={styles.stepDesc}>Get in touch 24/7.<br />We're ready to help.</p>
             </div>
             <div className={styles.stepConnector}></div>
           </div>
-          
+
           {/* Step 2 */}
           <div className={styles.step}>
             <div className={styles.stepIconWrap}>
@@ -272,7 +272,7 @@ export default function Home() {
             </div>
             <div className={styles.stepContent}>
               <h4 className={styles.stepTitle}>SHARE LOCATION</h4>
-              <p className={styles.stepDesc}>Tell us where you are<br/>and what's happened.</p>
+              <p className={styles.stepDesc}>Tell us where you are<br />and what's happened.</p>
             </div>
             <div className={styles.stepConnector}></div>
           </div>
@@ -285,7 +285,7 @@ export default function Home() {
             </div>
             <div className={styles.stepContent}>
               <h4 className={styles.stepTitle}>WE'LL GET TO YOU</h4>
-              <p className={styles.stepDesc}>We'll dispatch the nearest<br/>recovery vehicle.</p>
+              <p className={styles.stepDesc}>We'll dispatch the nearest<br />recovery vehicle.</p>
             </div>
           </div>
 
@@ -308,7 +308,7 @@ export default function Home() {
       {/* Our Services Section */}
       <section className={styles.ourServicesSection}>
         <div className={`container ${styles.ourServicesContainer}`}>
-          
+
           <div className={styles.ourServicesHeader}>
             <div className={styles.ourServicesEyebrow}>OUR SERVICES</div>
             <h2 className={styles.ourServicesTitle}>
@@ -317,49 +317,63 @@ export default function Home() {
             <p className={styles.ourServicesDesc}>
               Professional emergency services available 24/7 across the entire United Kingdom
             </p>
+            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '16px' }}>
+              {['Car Recovery Near Me', 'Van Recovery Near Me', 'Towing Service Near Me', '24/7 Vehicle Recovery'].map((tag) => (
+                <span key={tag} style={{
+
+                  color: '#ffffff',
+
+
+                  fontSize: '0.9rem',
+                  fontWeight: 800
+                }}>
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Premium Service Cards Grid */}
           <div className={styles.servicesGridNew}>
             {[
               {
-                title: 'Breakdown Vehicle Recovery',
+                title: 'Car Recovery Near Me',
                 icon: Truck,
                 iconBgColor: '#FFF0F0',
                 iconColor: '#D71920',
-                description: 'Fast, reliable 24/7 breakdown recovery across the UK with 15–30 minute response times.',
+                description: 'Fast, reliable 24/7 car recovery near you with rapid response times.',
                 imageSrc: '/images/breakdown.jpg',
-                imageAlt: 'Breakdown Vehicle Recovery',
+                imageAlt: 'Car Recovery Near Me',
               },
               {
-                title: 'Auction & Garage Collection',
+                title: 'Van Recovery Near Me',
                 icon: Building2,
                 iconBgColor: '#e6f4fb',
                 iconColor: '#0284c7',
-                description: 'Professional vehicle collection from auctions and garages across the UK.',
+                description: 'Specialised van and commercial vehicle recovery available 24/7 near you.',
                 imageSrc: '/images/auction.jpg',
-                imageAlt: 'Auction and Garage Collection',
+                imageAlt: 'Van Recovery Near Me',
               },
               {
-                title: 'Jump Start & Tyre Change',
+                title: 'Towing Service Near Me',
                 icon: Zap,
                 iconBgColor: '#eefcf1',
                 iconColor: '#16a34a',
-                description: 'Fast roadside jump start and tyre change assistance.',
+                description: 'Affordable emergency towing service for cars and vans near your location.',
                 imageSrc: '/images/jumpstart_battery_action.jpg',
-                imageAlt: 'Jump Start and Tyre Change',
+                imageAlt: 'Towing Service Near Me',
               },
               {
-                title: 'Classic Car & Special Vehicle Transport',
+                title: '24/7 Vehicle Recovery',
                 icon: Car,
                 iconBgColor: '#f5f3ff',
                 iconColor: '#7c3aed',
-                description: 'Specialist handling and transport for classic cars and special vehicles.',
+                description: 'Round-the-clock emergency vehicle recovery and breakdown assistance.',
                 imageSrc: '/images/classic.jpg',
-                imageAlt: 'Classic Car Transport',
+                imageAlt: '24/7 Vehicle Recovery',
               }
             ].map((card, index) => (
-              <ServiceCard 
+              <ServiceCard
                 key={index}
                 title={card.title}
                 icon={card.icon}
@@ -384,7 +398,7 @@ export default function Home() {
         <div className={`container ${styles.cambridgeContainer}`}>
           <FadeInWhenVisible>
             <h2 className={styles.cambridgeTitle}>
-              <span className={styles.textRed}>CAMBRIDGE</span> VEHICLE RECOVERY
+              <span className={styles.textRed}>24HOURS</span> ROADSIDE ASSISTANCE
             </h2>
             <p className={styles.cambridgeDesc}>
               Professional car and van recovery across Cambridge and surrounding areas.
