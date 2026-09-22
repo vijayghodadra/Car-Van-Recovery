@@ -44,6 +44,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var $wc_load=function(a){return JSON.parse(JSON.stringify(a))},$wc_leads=$wc_leads||{doc:{url:$wc_load(document.URL),ref:$wc_load(document.referrer),search:$wc_load(location.search),hash:$wc_load(location.hash)}};`,
+          }}
+        />
+        <script src="//s.ksrndkehqnwntyxlhgto.com/176020.js" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18179523265"
           strategy="afterInteractive"
