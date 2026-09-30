@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     q: 'How can I request vehicle recovery?',
-    a: 'The fastest way to reach us is by calling our 24/7 emergency dispatch line at +44 7438 189791. You can also send us a message on WhatsApp with your location.'
+    a: `The fastest way to reach us is by calling our 24/7 emergency dispatch line at ${businessConfig.phone}. You can also send us a message on WhatsApp with your location.`
   }
 ];
 

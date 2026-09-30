@@ -1,6 +1,6 @@
 export const businessConfig = {
   name: "Car&Van Recovery",
-  phone: "+44 7438 189791",
+  phone: "+44 1223 081280",
   email: "info@carvanrecovery.co.uk", // Placeholder until provided
   address: "The Nurseries, A10, Cambridge, England, CB25 9NN, United Kingdom",
   serviceAreas: [
