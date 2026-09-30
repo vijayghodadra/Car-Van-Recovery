@@ -17,8 +17,8 @@ export default function WhatsAppFloating() {
 
   if (!isVisible) return null;
 
-  // Format phone number for WhatsApp URL (remove spaces and plus)
-  const waNumber = businessConfig.phone.replace(/[\s+]/g, '');
+  // Format phone number for WhatsApp URL
+  const waNumber = businessConfig.whatsapp || "447438189791";
   const waUrl = `https://wa.me/${waNumber}`;
 
   return (

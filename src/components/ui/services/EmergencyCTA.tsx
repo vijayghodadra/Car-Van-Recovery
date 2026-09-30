@@ -12,7 +12,7 @@ export default function EmergencyCTA({
   subheadline = 'Our professional recovery team is ready to dispatch immediately 24/7.' 
 }: EmergencyCTAProps) {
   
-  const whatsappUrl = `https://wa.me/${businessConfig.phone.replace(/\s/g, '').replace('+', '')}`;
+  const whatsappUrl = `https://wa.me/447438189791`;
   const phoneUrl = `tel:${businessConfig.phone.replace(/\s/g, '')}`;
 
   return (

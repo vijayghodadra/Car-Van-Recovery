@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function BreakdownRecovery() {
   const coreServices = services.slice(0, 9); // Exclude Stansted ones for the main grid
 
-  const whatsappUrl = `https://wa.me/${businessConfig.phone.replace(/\s/g, '').replace('+', '')}`;
+  const whatsappUrl = `https://wa.me/447438189791`;
   const phoneUrl = `tel:${businessConfig.phone.replace(/\s/g, '')}`;
 
   return (

@@ -12,7 +12,7 @@ interface ServiceHeroProps {
 }
 
 export default function ServiceHero({ eyebrow, headline, subheadline, image, layout = 'full' }: ServiceHeroProps) {
-  const whatsappUrl = `https://wa.me/${businessConfig.phone.replace(/\s/g, '').replace('+', '')}`;
+  const whatsappUrl = `https://wa.me/447438189791`;
   const phoneUrl = `tel:${businessConfig.phone.replace(/\s/g, '')}`;
 
   if (layout === 'split') {

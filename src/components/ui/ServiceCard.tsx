@@ -99,7 +99,7 @@ export default function ServiceCard({
             <Phone size={18} />
             <span className={styles.btnTitle}>Emergency Call</span>
           </a>
-          <a href={`https://wa.me/${businessConfig.phone.replace(/[\s+]/g, '')}`} className={styles.btnGreen} target="_blank" rel="noopener noreferrer">
+          <a href={`https://wa.me/447438189791`} className={styles.btnGreen} target="_blank" rel="noopener noreferrer">
             <MessageCircle size={18} />
             <span className={styles.btnTitle}>WhatsApp</span>
           </a>

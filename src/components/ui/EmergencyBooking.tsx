@@ -30,7 +30,7 @@ export default function EmergencyBooking() {
 
   const handleWhatsApp = () => {
     const text = `*Emergency Booking Request*%0A%0A*Name:* ${formData.fullName}%0A*Phone:* ${formData.phone}%0A*Pickup:* ${formData.pickupLocation}%0A*Destination:* ${formData.destination}%0A*Vehicle:* ${formData.vehicleType}%0A*Service:* ${formData.serviceRequired}%0A*Notes:* ${formData.notes}`;
-    window.open(`https://wa.me/${businessConfig.phone.replace(/[\s+]/g, '')}?text=${text}`, '_blank');
+    window.open(`https://wa.me/447438189791?text=${text}`, '_blank');
   };
 
   return (

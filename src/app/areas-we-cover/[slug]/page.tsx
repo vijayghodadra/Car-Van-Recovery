@@ -110,7 +110,7 @@ export default async function LocationPage({ params }: { params: { slug: string 
                   <span>{businessConfig.phone}</span>
                 </div>
               </a>
-              <a href={`https://wa.me/${businessConfig.phone.replace(/\s/g, '').replace('+', '')}`} className={styles.btnGreen}>
+              <a href={`https://wa.me/447438189791`} className={styles.btnGreen}>
                 <MessageCircle size={20} />
                 <div className={styles.btnSmallText}>
                   <span>Chat on WhatsApp</span>
@@ -246,7 +246,7 @@ export default async function LocationPage({ params }: { params: { slug: string 
                   <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnServiceRed}>
                     <Phone size={14} /> Emergency Call
                   </a>
-                  <a href={`https://wa.me/${businessConfig.phone.replace(/\s/g, '').replace('+', '')}`} className={styles.btnServiceGreen}>
+                  <a href={`https://wa.me/447438189791`} className={styles.btnServiceGreen}>
                     <MessageCircle size={14} /> WhatsApp
                   </a>
                 </div>
@@ -270,7 +270,7 @@ export default async function LocationPage({ params }: { params: { slug: string 
                   <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnServiceRed}>
                     <Phone size={14} /> Emergency Call
                   </a>
-                  <a href={`https://wa.me/${businessConfig.phone.replace(/\s/g, '').replace('+', '')}`} className={styles.btnServiceGreen}>
+                  <a href={`https://wa.me/447438189791`} className={styles.btnServiceGreen}>
                     <MessageCircle size={14} /> WhatsApp
                   </a>
                 </div>
@@ -294,7 +294,7 @@ export default async function LocationPage({ params }: { params: { slug: string 
                   <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnServiceRed}>
                     <Phone size={14} /> Emergency Call
                   </a>
-                  <a href={`https://wa.me/${businessConfig.phone.replace(/\s/g, '').replace('+', '')}`} className={styles.btnServiceGreen}>
+                  <a href={`https://wa.me/447438189791`} className={styles.btnServiceGreen}>
                     <MessageCircle size={14} /> WhatsApp
                   </a>
                 </div>
@@ -318,7 +318,7 @@ export default async function LocationPage({ params }: { params: { slug: string 
                   <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnServiceRed}>
                     <Phone size={14} /> Emergency Call
                   </a>
-                  <a href={`https://wa.me/${businessConfig.phone.replace(/\s/g, '').replace('+', '')}`} className={styles.btnServiceGreen}>
+                  <a href={`https://wa.me/447438189791`} className={styles.btnServiceGreen}>
                     <MessageCircle size={14} /> WhatsApp
                   </a>
                 </div>

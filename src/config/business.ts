@@ -1,6 +1,8 @@
 export const businessConfig = {
   name: "Car&Van Recovery",
-  phone: "+44 1223 081280",
+  phone: "07438 189791",
+  whatsapp: "447438189791",
+  whatsappUrl: "https://wa.me/447438189791",
   email: "info@carvanrecovery.co.uk", // Placeholder until provided
   address: "The Nurseries, A10, Cambridge, England, CB25 9NN, United Kingdom",
   serviceAreas: [

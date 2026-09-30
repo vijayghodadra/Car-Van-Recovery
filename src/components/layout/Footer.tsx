@@ -28,7 +28,7 @@ const InstagramIcon = ({ size = 16 }) => (
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const phoneClean = businessConfig.phone.replace(/[\s+]/g, '');
+  const phoneClean = businessConfig.whatsapp || "447438189791";
   const phoneUrl = `tel:${businessConfig.phone.replace(/\s/g, '')}`;
   const waUrl = `https://wa.me/${phoneClean}?text=${encodeURIComponent('Hi, I need emergency car/van recovery assistance.')}`;
 

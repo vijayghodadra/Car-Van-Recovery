@@ -42,7 +42,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  const whatsappUrl = `https://wa.me/${businessConfig.phone.replace(/\s/g, '').replace('+', '')}`;
+  const whatsappUrl = `https://wa.me/447438189791`;
   const phoneUrl = `tel:${businessConfig.phone.replace(/\s/g, '')}`;
 
   return (
