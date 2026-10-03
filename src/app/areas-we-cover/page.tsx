@@ -11,17 +11,26 @@ import {
   ArrowRight,
   Truck,
   BatteryWarning,
+  Wrench,
+  Zap,
+  Disc,
+  AlertTriangle,
+  Navigation,
+  ShieldAlert,
   HelpCircle,
   Plus
 } from 'lucide-react';
 import { businessConfig } from '@/config/business';
+import { generateLocalSchema } from '@/config/seo';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Areas We Cover | Vehicle Recovery Cambridge & Cambridgeshire | Car&Van Recovery',
-  description: '24/7 vehicle recovery across Cambridge, Cambridgeshire, the M11 and surrounding areas. Car&Van Recovery provides professional breakdown recovery, accident recovery and vehicle transport.',
+  title: {
+    absolute: 'Areas We Cover | Vehicle Recovery Cambridge & Cambridgeshire | Car&Van Recovery'
+  },
+  description: 'Fast, reliable 24/7 vehicle recovery across Cambridge and Cambridgeshire. Breakdown recovery, breakdown towing, jump starts, and vehicle transport.',
   alternates: {
-    canonical: '/areas-we-cover',
+    canonical: 'https://www.carvanrecovery.co.uk/areas-we-cover',
   }
 };
 
@@ -42,17 +51,19 @@ const locationsList = [
   { name: 'St Ives', href: '/areas-we-cover/st-ives' }
 ];
 
-const routes = [
-  'Breakdown Vehicle Recovery Cambridge & Cambridgeshire',
-  'Vehicle Recovery M11',
-  'Vehicle Recovery Stansted',
-  'Vehicle Recovery A11',
-  'Vehicle Recovery A14',
-  'Vehicle Recovery A10',
-  'Vehicle Recovery Newmarket',
-  'Vehicle Recovery Ely',
-  'Vehicle Recovery Huntingdon',
-  'Vehicle Recovery Peterborough'
+const recoveryServices = [
+  { title: 'Vehicle recovery Cambridge', icon: ShieldCheck },
+  { title: 'Car recovery Cambridge', icon: Car },
+  { title: 'Van recovery Cambridge', icon: Truck },
+  { title: 'Breakdown recovery Cambridgeshire', icon: Wrench },
+  { title: 'Emergency roadside assistance', icon: AlertTriangle },
+  { title: 'Breakdown towing', icon: Truck },
+  { title: 'Jump starts', icon: Zap },
+  { title: 'Flat battery assistance', icon: BatteryWarning },
+  { title: 'Flat tyre assistance', icon: Disc },
+  { title: 'Accident recovery', icon: ShieldAlert },
+  { title: 'Vehicle transportation', icon: Navigation },
+  { title: 'Emergency vehicle recovery', icon: Clock },
 ];
 
 const faqs = [
@@ -83,30 +94,40 @@ const faqs = [
 ];
 
 export default function AreasWeCoverPage() {
+  const phoneUrl = `tel:${businessConfig.phone.replace(/\s/g, '')}`;
+  const whatsappUrl = `https://wa.me/447438189791`;
+
   return (
     <main className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateLocalSchema()) }}
+      />
+
       {/* 1. HERO SECTION */}
       <section className={styles.hero}>
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroLeft}>
-            <span className={styles.heroBadge}>24/7 REGIONAL & NATIONWIDE VEHICLE RECOVERY</span>
+            <span className={styles.heroBadge}>24/7 REGIONAL &amp; NATIONWIDE VEHICLE RECOVERY</span>
             <h1 className={styles.heroTitle}>
-              ALL OUR<br/>
-              <span className={styles.textRed}>SERVICE AREAS</span>
+              All Our <span className={styles.textRed}>Service Areas</span>
             </h1>
             <p className={styles.heroDesc}>
-              Fast, reliable emergency roadside recovery, breakdown towing, jump starts, flat battery assistance, and vehicle transport 24 hours a day.
+              Fast, reliable vehicle recovery in Cambridgeshire, with professional 24/7 roadside assistance, breakdown recovery, breakdown towing, jump starts, flat battery assistance and vehicle transport. Car &amp; Van Recovery provides dependable emergency recovery services across Cambridge, Cambridgeshire and surrounding areas, helping motorists get back on the road safely.
+            </p>
+            <p className={styles.heroDesc} style={{ marginTop: '-20px' }}>
+              Our experienced recovery operators are available 24 hours a day, 7 days a week, providing professional assistance for cars, vans and commercial vehicles experiencing breakdowns, accidents or roadside emergencies.
             </p>
             
             <div className={styles.heroButtons}>
-              <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnRed}>
+              <a href={phoneUrl} className={styles.btnRed}>
                 <Phone size={20} />
                 <div className={styles.btnSmallText}>
                   <span>Call Emergency Recovery</span>
                   <span>{businessConfig.phone}</span>
                 </div>
               </a>
-              <a href={`https://wa.me/447438189791`} className={styles.btnGreen}>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className={styles.btnGreen}>
                 <MessageCircle size={20} />
                 <div className={styles.btnSmallText}>
                   <span>Chat on WhatsApp</span>
@@ -127,7 +148,7 @@ export default function AreasWeCoverPage() {
                 <Car size={24} className={styles.trustIcon} />
                 <div className={styles.trustText}>
                   <span>All Vehicle Types</span>
-                  <span>Cars, Vans & More</span>
+                  <span>Cars, Vans &amp; More</span>
                 </div>
               </div>
               <div className={styles.trustItem}>
@@ -139,11 +160,12 @@ export default function AreasWeCoverPage() {
               </div>
             </div>
           </div>
+
           <div className={styles.heroRight}>
             <div className={styles.heroImageWrap}>
               <Image 
                 src="/images/hero_recovery_truck.jpg" 
-                alt="Professional UK vehicle recovery truck transporting a car on a highway"
+                alt="Vehicle recovery truck in Cambridge and Cambridgeshire"
                 fill
                 style={{ objectFit: 'cover' }}
                 priority
@@ -153,24 +175,7 @@ export default function AreasWeCoverPage() {
         </div>
       </section>
 
-      {/* SEO INTENT KEYWORDS SECTION */}
-      <section style={{ backgroundColor: 'var(--brand-black)', color: '#fff', padding: 'var(--spacing-16) 0' }}>
-        <div className="container">
-          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 900, marginBottom: 'var(--spacing-6)', letterSpacing: '-0.02em' }}>
-              Looking for "Car Recovery Near Me"?
-            </h2>
-            <p style={{ fontSize: '1.125rem', lineHeight: 1.6, color: 'rgba(255,255,255,0.9)', marginBottom: 'var(--spacing-6)' }}>
-              Whether you are stranded with a <strong>flat battery</strong>, need an urgent <strong>emergency jump start</strong>, or require immediate <strong>24/7 emergency towing and roadside assistance</strong>, our professional fleet is always stationed near you.
-            </p>
-            <p style={{ fontSize: '1.125rem', lineHeight: 1.6, color: 'rgba(255,255,255,0.9)' }}>
-              We guarantee rapid dispatch across all our service areas including <strong>Cambridge, the M11, Harlow, Stevenage, Bishop's Stortford, Stansted Airport, Haverhill, Newmarket, Norwich, Bury St Edmunds, Huntingdon, and St Neots.</strong> For any vehicle breakdown emergency near these locations, trust us for a fast, secure, and fully insured recovery.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. COVERAGE SECTION */}
+      {/* 2. COVERAGE SECTION (Areas We Cover Across Cambridgeshire + Map) */}
       <section className={styles.coverageSection}>
         <div className={`container ${styles.coverageContainer}`}>
           <div className={styles.coverageLeft}>
@@ -179,17 +184,16 @@ export default function AreasWeCoverPage() {
               Areas We Cover Across <span className={styles.textRed}>Cambridgeshire</span>
             </h2>
             <p className={styles.coverageDesc}>
-              Car&Van Recovery provides professional 24/7 vehicle recovery, breakdown recovery and roadside assistance across Cambridge, Cambridgeshire and surrounding areas.
+              Car &amp; Van Recovery provides professional vehicle recovery across Cambridgeshire, including Cambridge and surrounding towns, villages and local areas. Whether you have broken down at home, at work, on a local road or while travelling through the region, our recovery team is available day and night.
             </p>
             <p className={styles.coverageDesc}>
-              Our experienced recovery operators offer car recovery, van recovery, emergency roadside assistance, jump starts, flat battery assistance, accident recovery and vehicle transportation.
+              Our breakdown recovery Cambridgeshire service covers a wide range of roadside problems, from flat batteries and punctures to mechanical breakdowns, accident recovery and vehicle transportation.
             </p>
-
-
           </div>
           <div className={styles.coverageRight}>
             <div className={styles.mapWrapper}>
               <iframe
+                title="Cambridge and Cambridgeshire Coverage Map"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -202,11 +206,49 @@ export default function AreasWeCoverPage() {
         </div>
       </section>
 
-      {/* 3. FEATURED COVERAGE ROUTES */}
+      {/* 3. 24/7 ROADSIDE ASSISTANCE ACROSS CAMBRIDGESHIRE (12 Services) */}
+      <section className={styles.servicesListSection}>
+        <div className="container">
+          <div className={styles.servicesListHeader}>
+            <span className={styles.sectionLabel}>OUR CAPABILITIES</span>
+            <h2 className={styles.sectionTitle}>
+              24/7 Roadside Assistance Across <span className={styles.textRed}>Cambridgeshire</span>
+            </h2>
+            <p className={styles.coverageDesc}>
+              A vehicle breakdown can happen at any time, which is why our 24/7 roadside assistance Cambridgeshire service operates around the clock.
+            </p>
+            <p style={{ fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--accent-red)', marginTop: '20px' }}>
+              Our professional recovery operators can assist with:
+            </p>
+          </div>
+
+          <div className={styles.servicesListGrid}>
+            {recoveryServices.map((service, idx) => {
+              const IconComp = service.icon;
+              return (
+                <div key={idx} className={styles.servicePill}>
+                  <div className={styles.servicePillIcon}>
+                    <IconComp size={22} />
+                  </div>
+                  <span className={styles.servicePillText}>{service.title}</span>
+                </div>
+              );
+            })}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '32px' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem' }}>
+              If your vehicle cannot be safely repaired at the roadside, we can recover it to a suitable garage, home address or other destination.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. FEATURED COVERAGE ROUTES */}
       <section className={styles.routesSection}>
         <div className="container">
           <span className={styles.sectionLabel}>FEATURED COVERAGE</span>
-          <h2 className={styles.sectionTitle}>Key Recovery Routes & Areas</h2>
+          <h2 className={styles.sectionTitle}>Key Recovery Routes &amp; Areas</h2>
           
           <div className={styles.routesContainer}>
             <div className={styles.routesLeft}>
@@ -223,127 +265,135 @@ export default function AreasWeCoverPage() {
               </div>
             </div>
             <div className={styles.routesRight}>
-            <Image 
-              src="/images/featured_routes_truck.jpg"
-              alt="Vehicle recovery truck on a wet highway under dramatic clouds"
-              fill
-              style={{ objectFit: 'cover', borderRadius: '12px' }}
-            />
+              <Image 
+                src="/images/featured_routes_truck.jpg"
+                alt="Vehicle recovery truck operating along the M11 and Cambridgeshire routes"
+                fill
+                style={{ objectFit: 'cover', borderRadius: '12px' }}
+              />
+            </div>
           </div>
-        </div>
         </div>
       </section>
 
-      {/* 4. RECOVERY SERVICES */}
-      <section className={styles.servicesSection}>
+      {/* 5. DEEP CONTENT BLOCKS */}
+      <section className={styles.deepContentSection}>
         <div className="container">
-          <span className={styles.sectionLabel}>OUR SERVICES</span>
-          <h2 className={styles.sectionTitle}>Recovery Services Across Our Coverage Areas</h2>
-          
-          <div className={styles.servicesGrid}>
+          <div className={styles.deepContentGrid}>
             
-            {/* Card 1 */}
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceCardImgWrap}>
-                <Image src="/images/Poster/Car Recovery.png" alt="Breakdown Recovery" fill style={{ objectFit: 'cover' }} />
-              </div>
-              <div className={styles.serviceCardContent}>
-                <div className={styles.serviceIconWrap}>
-                  <Truck size={36} strokeWidth={1.5} />
-                </div>
-                <h3 className={styles.serviceTitle}>Breakdown Recovery</h3>
-                <p className={styles.serviceDesc}>
-                  24/7 recovery assistance when your vehicle breaks down.
-                </p>
-                <div className={styles.serviceButtons}>
-                  <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnServiceRed}>
-                    <Phone size={14} /> Emergency Call
-                  </a>
-                  <a href={`https://wa.me/447438189791`} className={styles.btnServiceGreen}>
-                    <MessageCircle size={14} /> WhatsApp
-                  </a>
-                </div>
-              </div>
+            {/* Block 1 */}
+            <div className={styles.deepContentCard}>
+              <h2 className={styles.deepContentTitle}>Car &amp; Van Breakdown Recovery</h2>
+              <p className={styles.deepContentText}>
+                Our car breakdown recovery and van breakdown recovery services are available throughout Cambridge and Cambridgeshire. We assist private motorists, businesses and commercial vehicle operators with a range of vehicle breakdown problems.
+              </p>
+              <p className={styles.deepContentText}>
+                Whether you are dealing with a mechanical fault, battery failure, puncture or another roadside issue, our experienced recovery operators can provide professional assistance. If the vehicle cannot continue safely, we can arrange vehicle recovery in Cambridgeshire and transport it securely.
+              </p>
             </div>
 
-            {/* Card 2 */}
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceCardImgWrap}>
-                <Image src="/images/Poster/Van Recovery.png" alt="Accident Recovery" fill style={{ objectFit: 'cover' }} />
-              </div>
-              <div className={styles.serviceCardContent}>
-                <div className={styles.serviceIconWrap}>
-                  <ShieldCheck size={36} strokeWidth={1.5} />
-                </div>
-                <h3 className={styles.serviceTitle}>Accident Recovery</h3>
-                <p className={styles.serviceDesc}>
-                  Safe recovery and transportation following a vehicle accident.
-                </p>
-                <div className={styles.serviceButtons}>
-                  <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnServiceRed}>
-                    <Phone size={14} /> Emergency Call
-                  </a>
-                  <a href={`https://wa.me/447438189791`} className={styles.btnServiceGreen}>
-                    <MessageCircle size={14} /> WhatsApp
-                  </a>
-                </div>
-              </div>
+            {/* Block 2 */}
+            <div className={styles.deepContentCard}>
+              <h2 className={styles.deepContentTitle}>Emergency Roadside Assistance</h2>
+              <p className={styles.deepContentText}>
+                Our emergency roadside assistance service is available 24 hours a day, 365 days a year. We understand how stressful it can be to become stranded, particularly at night or in an unfamiliar location.
+              </p>
+              <p className={styles.deepContentText}>
+                Whether you need a jump start in Cambridge, flat battery assistance, breakdown towing or complete vehicle recovery, our professional team is ready to help.
+              </p>
             </div>
 
-            {/* Card 3 */}
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceCardImgWrap}>
-                <Image src="/images/jumpstart_battery_action.jpg" alt="Non-Starter Recovery" fill style={{ objectFit: 'cover' }} />
-              </div>
-              <div className={styles.serviceCardContent}>
-                <div className={styles.serviceIconWrap}>
-                  <BatteryWarning size={36} strokeWidth={1.5} />
-                </div>
-                <h3 className={styles.serviceTitle}>Non-Starter Recovery</h3>
-                <p className={styles.serviceDesc}>
-                  Recovery assistance for vehicles that will not start.
-                </p>
-                <div className={styles.serviceButtons}>
-                  <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnServiceRed}>
-                    <Phone size={14} /> Emergency Call
-                  </a>
-                  <a href={`https://wa.me/447438189791`} className={styles.btnServiceGreen}>
-                    <MessageCircle size={14} /> WhatsApp
-                  </a>
-                </div>
-              </div>
+            {/* Block 3 */}
+            <div className={styles.deepContentCard}>
+              <h2 className={styles.deepContentTitle}>Jump Start &amp; Flat Battery Assistance</h2>
+              <p className={styles.deepContentText}>
+                A flat or discharged battery is one of the most common causes of vehicle breakdowns. If your car or van won&apos;t start, our jump start service in Cambridge and Cambridgeshire can help get your vehicle moving again where possible.
+              </p>
+              <p className={styles.deepContentText}>
+                We also provide flat battery assistance for motorists who need urgent roadside support. If your vehicle cannot be restarted or has an underlying mechanical or electrical fault, our team can arrange further breakdown recovery and vehicle transportation.
+              </p>
             </div>
 
-            {/* Card 4 */}
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceCardImgWrap}>
-                <Image src="/images/Poster/Vehicle Transportation.png" alt="Vehicle Transport" fill style={{ objectFit: 'cover' }} />
-              </div>
-              <div className={styles.serviceCardContent}>
-                <div className={styles.serviceIconWrap}>
-                  <Car size={36} strokeWidth={1.5} />
-                </div>
-                <h3 className={styles.serviceTitle}>Vehicle Transport</h3>
-                <p className={styles.serviceDesc}>
-                  Safe vehicle transportation to a garage, home or agreed destination.
-                </p>
-                <div className={styles.serviceButtons}>
-                  <a href={`tel:${businessConfig.phone.replace(/\s/g, '')}`} className={styles.btnServiceRed}>
-                    <Phone size={14} /> Emergency Call
-                  </a>
-                  <a href={`https://wa.me/447438189791`} className={styles.btnServiceGreen}>
-                    <MessageCircle size={14} /> WhatsApp
-                  </a>
-                </div>
-              </div>
+            {/* Block 4 */}
+            <div className={styles.deepContentCard}>
+              <h2 className={styles.deepContentTitle}>Accident Recovery &amp; Vehicle Transport</h2>
+              <p className={styles.deepContentText}>
+                If your vehicle has been involved in an accident and cannot safely continue its journey, our accident recovery Cambridge service can provide professional recovery assistance.
+              </p>
+              <p className={styles.deepContentText}>
+                We also offer vehicle transport across Cambridgeshire for cars and vans that need to be moved between garages, homes, businesses, auction locations or other suitable destinations.
+              </p>
+            </div>
+
+            {/* Block 5: Full Width */}
+            <div className={styles.deepContentCard} style={{ gridColumn: '1 / -1' }}>
+              <h2 className={styles.deepContentTitle}>Reliable Vehicle Recovery Across Cambridgeshire</h2>
+              <p className={styles.deepContentText}>
+                From Cambridge and surrounding Cambridgeshire areas, Car &amp; Van Recovery provides dependable 24 hour vehicle recovery and roadside assistance for motorists who need professional help.
+              </p>
+              <p className={styles.deepContentText}>
+                Whether you require breakdown recovery, car recovery, van recovery, emergency roadside assistance, accident recovery or vehicle transportation, our experienced team is available 24/7.
+              </p>
             </div>
 
           </div>
         </div>
       </section>
 
+      {/* 6. FAQ SECTION */}
+      <section className={styles.faqSection}>
+        <div className="container">
+          <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}>
+            <span className={styles.sectionLabel}>HAVE QUESTIONS?</span>
+            <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
+            <p className={styles.coverageDesc}>
+              Common questions about our coverage areas and vehicle recovery services in Cambridge and Cambridgeshire.
+            </p>
+          </div>
 
+          <div className={styles.faqGrid}>
+            {faqs.map((faq, i) => (
+              <details key={i} className={styles.faqItem}>
+                <summary className={styles.faqSummary}>
+                  <div className={styles.faqQuestion}>
+                    <HelpCircle size={20} className={styles.faqQIcon} />
+                    <span>{faq.q}</span>
+                  </div>
+                  <Plus size={18} className={styles.faqPlus} />
+                </summary>
+                <div className={styles.faqAnswer}>
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* 7. NEED VEHICLE RECOVERY IN CAMBRIDGESHIRE? (FINAL CTA) */}
+      <section className={styles.finalCtaSection}>
+        <div className="container">
+          <div className={styles.finalCtaBox}>
+            <h2 className={styles.finalCtaTitle}>Need Vehicle Recovery in Cambridgeshire?</h2>
+            <p className={styles.finalCtaText}>
+              Don&apos;t let a vehicle breakdown leave you stranded. Car &amp; Van Recovery provides 24/7 vehicle recovery across Cambridgeshire, with professional roadside assistance available day and night.
+            </p>
+            <p className={styles.finalCtaText} style={{ fontWeight: 800, color: '#ffffff' }}>
+              For reliable breakdown recovery, car and van recovery, breakdown towing, jump starts and vehicle transport in Cambridge and Cambridgeshire, contact our recovery team today.
+            </p>
+            <div className={styles.finalCtaButtons}>
+              <a href={phoneUrl} className={styles.btnRed}>
+                <Phone size={20} />
+                <span>Call Dispatch: {businessConfig.phone}</span>
+              </a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className={styles.btnGreen}>
+                <MessageCircle size={20} />
+                <span>WhatsApp Live Chat</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

@@ -1,0 +1,433 @@
+.heroSection {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--brand-black);
+  padding-top: var(--spacing-24);
+  padding-bottom: var(--spacing-32);
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(10,17,24,0.96) 0%, rgba(10,17,24,0.75) 60%, rgba(10,17,24,0.35) 100%);
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 860px;
+}
+
+.heroText {
+  color: #fff;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-red);
+  font-weight: 800;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--spacing-6);
+  text-transform: uppercase;
+  background: rgba(227, 27, 35, 0.15);
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(227, 27, 35, 0.3);
+}
+
+.title {
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-6);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.title span {
+  color: var(--accent-red);
+}
+
+.description {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: var(--spacing-8);
+  max-width: 720px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--accent-red);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(227, 27, 35, 0.4);
+}
+
+.btnPrimary:hover {
+  background-color: #c4131a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(227, 27, 35, 0.6);
+}
+
+.btnWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.125rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btnWhatsapp:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.glassStats {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 95%;
+  max-width: 1040px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  padding: var(--spacing-4) var(--spacing-6);
+  border-radius: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,1);
+  z-index: 20;
+}
+
+.glassStat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.glassStatIcon {
+  color: var(--accent-red);
+  background: rgba(227, 27, 35, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.glassStatText {
+  display: flex;
+  flex-direction: column;
+}
+
+.glassStatTitle {
+  font-weight: 900;
+  color: var(--brand-black);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.glassStatDesc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Common Section Container */
+.section {
+  padding: var(--spacing-20) 0;
+}
+
+.sectionAlt {
+  background-color: var(--bg-secondary);
+}
+
+.contentContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sectionHeaderCenter {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto var(--spacing-12);
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-6);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.leadText {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-6);
+}
+
+.sublistTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-red);
+  margin-top: var(--spacing-6);
+}
+
+.inlineLink {
+  color: var(--accent-red);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.inlineLink:hover {
+  opacity: 0.85;
+}
+
+/* Service Pills Grid */
+.pillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-8);
+}
+
+.pillCard {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--spacing-5);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.pillCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-red);
+  box-shadow: 0 8px 20px rgba(227, 27, 35, 0.08);
+}
+
+.pillIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(227, 27, 35, 0.1);
+  color: var(--accent-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pillText {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+/* Two Column Feature Duo */
+.duoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.duoCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: var(--spacing-8);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.duoCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-red);
+}
+
+.duoCardIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(227, 27, 35, 0.1);
+  color: var(--accent-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-5);
+}
+
+.duoCardTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-4);
+  line-height: 1.25;
+}
+
+.duoCardText {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-4);
+}
+
+.duoCardText:last-child {
+  margin-bottom: 0;
+}
+
+/* Final CTA Section */
+.callSection {
+  padding: var(--spacing-20) 0;
+  background-color: var(--bg-primary);
+  text-align: center;
+}
+
+.callBox {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: var(--spacing-12) var(--spacing-8);
+  background: linear-gradient(180deg, rgba(227, 27, 35, 0.05) 0%, rgba(227, 27, 35, 0.01) 100%);
+  border: 2px dashed rgba(227, 27, 35, 0.35);
+  border-radius: 20px;
+}
+
+.callTitle {
+  font-size: clamp(2rem, 3.2vw, 2.5rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-4);
+  letter-spacing: -0.02em;
+}
+
+.callText {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: var(--spacing-4);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.callTextLead {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.callActions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-8);
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding-bottom: var(--spacing-36);
+  }
+
+  .glassStats {
+    width: 92%;
+    padding: var(--spacing-4);
+    gap: var(--spacing-4) var(--spacing-2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 12px;
+  }
+
+  .glassStat {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .glassStatIcon {
+    padding: 6px;
+  }
+
+  .glassStatIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .glassStatTitle {
+    font-size: 0.85rem;
+  }
+
+  .glassStatDesc {
+    font-size: 0.65rem;
+  }
+
+  .duoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .callBox {
+    padding: var(--spacing-8) var(--spacing-4);
+  }
+}

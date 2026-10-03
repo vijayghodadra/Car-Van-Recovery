@@ -1,0 +1,505 @@
+.heroSection {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--brand-black);
+  padding-top: var(--spacing-24);
+  padding-bottom: var(--spacing-32);
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(10,17,24,0.96) 0%, rgba(10,17,24,0.75) 60%, rgba(10,17,24,0.4) 100%);
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 860px;
+}
+
+.heroText {
+  color: #fff;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-red);
+  font-weight: 800;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--spacing-6);
+  text-transform: uppercase;
+  background: rgba(227, 27, 35, 0.15);
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(227, 27, 35, 0.3);
+}
+
+.title {
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-6);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.title span {
+  color: var(--accent-red);
+}
+
+.description {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: var(--spacing-8);
+  max-width: 720px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--accent-red);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(227, 27, 35, 0.4);
+}
+
+.btnPrimary:hover {
+  background-color: #c4131a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(227, 27, 35, 0.6);
+}
+
+.btnWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.125rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btnWhatsapp:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.glassStats {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 95%;
+  max-width: 1040px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  padding: var(--spacing-4) var(--spacing-6);
+  border-radius: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,1);
+  z-index: 20;
+}
+
+.glassStat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.glassStatIcon {
+  color: var(--accent-red);
+  background: rgba(227, 27, 35, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.glassStatText {
+  display: flex;
+  flex-direction: column;
+}
+
+.glassStatTitle {
+  font-weight: 900;
+  color: var(--brand-black);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.glassStatDesc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Comprehensive Breakdown Section */
+.comprehensiveSection {
+  padding: var(--spacing-28) 0 var(--spacing-16);
+  background-color: var(--bg-primary);
+}
+
+.contentContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-6);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.leadText {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-6);
+}
+
+.inlineLink {
+  color: var(--accent-red);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.inlineLink:hover {
+  opacity: 0.85;
+}
+
+/* 24/7 Roadside Assistance & Services Grid */
+.assistanceSection {
+  padding: var(--spacing-20) 0;
+  background-color: var(--bg-secondary);
+}
+
+.assistanceHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-12);
+}
+
+.assistanceSubtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-top: var(--spacing-4);
+}
+
+.assistanceListTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-red);
+  margin-top: var(--spacing-6);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-5);
+  margin-top: var(--spacing-8);
+}
+
+.serviceCard {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: var(--spacing-6);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.serviceCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-red);
+  box-shadow: 0 10px 25px rgba(227, 27, 35, 0.1);
+}
+
+.serviceCardIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(227, 27, 35, 0.1);
+  color: var(--accent-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.serviceCardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+/* Two Column Features (Fast & Reliable + Transparent) */
+.featuresDuoSection {
+  padding: var(--spacing-20) 0;
+  background-color: var(--bg-primary);
+}
+
+.duoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.duoCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: var(--spacing-8);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.duoCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-red);
+}
+
+.duoCardIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(227, 27, 35, 0.1);
+  color: var(--accent-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-5);
+}
+
+.duoCardTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-4);
+  line-height: 1.25;
+}
+
+.duoCardText {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-4);
+}
+
+.duoCardText:last-child {
+  margin-bottom: 0;
+}
+
+/* M11 Motorway Recovery Section */
+.m11Section {
+  padding: var(--spacing-20) 0;
+  background: linear-gradient(135deg, #0b131e 0%, #172433 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.m11Container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.m11Badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(227, 27, 35, 0.2);
+  color: #ff6b6b;
+  border: 1px solid rgba(227, 27, 35, 0.4);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: var(--spacing-4);
+  text-transform: uppercase;
+}
+
+.m11Title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 900;
+  margin-bottom: var(--spacing-6);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.m11Text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: var(--spacing-6);
+}
+
+.m11Buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-8);
+}
+
+/* Emergency CTA Banner (Call for 24/7 Breakdown Recovery in Cambridge) */
+.callSection {
+  padding: var(--spacing-20) 0;
+  background-color: var(--bg-primary);
+  text-align: center;
+}
+
+.callBox {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: var(--spacing-12) var(--spacing-8);
+  background: linear-gradient(180deg, rgba(227, 27, 35, 0.05) 0%, rgba(227, 27, 35, 0.01) 100%);
+  border: 2px dashed rgba(227, 27, 35, 0.35);
+  border-radius: 20px;
+}
+
+.callTitle {
+  font-size: clamp(2rem, 3.2vw, 2.5rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-4);
+  letter-spacing: -0.02em;
+}
+
+.callText {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: var(--spacing-4);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.callTextLead {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.callActions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-8);
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding-bottom: var(--spacing-36);
+  }
+
+  .glassStats {
+    width: 92%;
+    padding: var(--spacing-4);
+    gap: var(--spacing-4) var(--spacing-2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 12px;
+  }
+
+  .glassStat {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .glassStatIcon {
+    padding: 6px;
+  }
+
+  .glassStatIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .glassStatTitle {
+    font-size: 0.85rem;
+  }
+
+  .glassStatDesc {
+    font-size: 0.65rem;
+  }
+
+  .comprehensiveSection {
+    padding-top: var(--spacing-36);
+  }
+
+  .duoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .callBox {
+    padding: var(--spacing-8) var(--spacing-4);
+  }
+}
