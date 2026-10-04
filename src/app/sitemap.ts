@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/vehicle-recovery',
     '/stansted-services',
     '/areas-we-cover',
+    '/m11-corridor',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
