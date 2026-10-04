@@ -7,7 +7,7 @@ import { businessConfig } from '@/config/business';
 import styles from './Header.module.css';
 import { 
   Menu, X, Phone, ChevronDown, 
-  MessageSquare, Star, Wrench, Fuel, Navigation, Building2, Zap, Target
+  MessageSquare, Star, Wrench, Fuel, Navigation, Building2, Zap, Target, ShieldAlert
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -94,6 +94,7 @@ export default function Header() {
       href: '/breakdown-recovery',
       icon: FilledTowTruckIcon,
       subItems: [
+        { name: 'Motorway Breakdown Assistance', href: '/services/motorway-breakdown-assistance', icon: ShieldAlert },
         { name: 'LWB Van Recovery', href: '/services/lbw-van-recovery', icon: Navigation },
         { name: 'Jumpstart Service', href: '/services/jumpstart-service', icon: Zap },
         { name: 'Tyre Change & Tyre Repair Service', href: '/services/tyre-change-and-repair', icon: Wrench },

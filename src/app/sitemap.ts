@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/stansted-services',
     '/areas-we-cover',
     '/m11-corridor',
+    '/services/motorway-breakdown-assistance',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
