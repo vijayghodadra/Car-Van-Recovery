@@ -193,7 +193,7 @@ export default function Header() {
                 </Link>
                 
                 {link.subItems && (
-                  <div className={styles.dropdownMenu}>
+                  <div className={`${styles.dropdownMenu} ${link.subItems.length > 7 ? styles.dropdownMenuGrid : ''}`}>
                     {link.subItems.map(subItem => {
                       const SubIcon = (subItem as any).icon;
                       return (

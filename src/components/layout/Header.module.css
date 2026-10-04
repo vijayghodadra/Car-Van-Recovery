@@ -208,20 +208,26 @@
   left: 50%;
   transform: translateX(-50%) translateY(8px);
   background-color: #ffffff;
-  min-width: 205px;
-  max-height: calc(100vh - 85px);
-  overflow-y: auto;
+  min-width: 220px;
   border: 1px solid var(--border-subtle);
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease;
   z-index: 100;
   display: flex;
   flex-direction: column;
-  padding: 6px;
+  padding: 8px;
   gap: 2px;
+}
+
+.dropdownMenuGrid {
+  min-width: 380px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 8px;
+  padding: 12px;
 }
 
 .dropdownMenu::-webkit-scrollbar {
