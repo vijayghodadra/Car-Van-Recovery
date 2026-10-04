@@ -59,12 +59,14 @@
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(1.85rem, 5vw, 4rem);
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 24px;
   color: var(--brand-black);
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .heroDesc {
@@ -803,5 +805,55 @@
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 36px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 40px 0;
+  }
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .btnRed, .btnGreen {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+  .heroTrust {
+    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .heroRight {
+    height: 240px;
+  }
+  .servicesListGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .servicePill {
+    padding: 14px 16px;
+  }
+  .deepContentGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .deepContentCard {
+    padding: 20px;
+  }
+  .finalCtaSection {
+    padding: 50px 0;
+  }
+  .finalCtaButtons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .finalCtaButtons .btnRed, .finalCtaButtons .btnGreen {
+    width: 100%;
+    justify-content: center;
+  }
 }
 

@@ -67,12 +67,14 @@
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(1.85rem, 5vw, 4.5rem);
   font-weight: 900;
   line-height: 1.1;
   color: var(--brand-black);
   margin-bottom: 24px;
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .heroDesc {
@@ -618,5 +620,34 @@
 
 .deepFeatureText:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 40px 0;
+  }
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .btnRed, .btnGreen {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    min-width: 0;
+  }
+  .card {
+    padding: 20px;
+  }
+  .splitContent {
+    padding: 24px;
+  }
+  .deepFeatureCard {
+    padding: 20px;
+  }
+  .section {
+    padding: 50px 0;
+  }
 }
 

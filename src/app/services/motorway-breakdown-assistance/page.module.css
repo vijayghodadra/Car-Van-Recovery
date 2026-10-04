@@ -57,12 +57,14 @@
 }
 
 .title {
-  font-size: clamp(2.3rem, 4.2vw, 4rem);
+  font-size: clamp(1.85rem, 5vw, 4rem);
   font-weight: 900;
   line-height: 1.15;
   margin-bottom: var(--spacing-6, 1.5rem);
   letter-spacing: -0.02em;
   color: #ffffff;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .title span {
@@ -421,4 +423,52 @@
   justify-content: center;
   gap: 1.25rem;
   flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    min-height: auto;
+  }
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .callBtn, .whatsappBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.25rem;
+    font-size: 1rem;
+  }
+  .trustBadges {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .checkGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .detailCard {
+    padding: 1.5rem;
+  }
+  .ctaBanner {
+    padding: 2.25rem 1.25rem;
+    border-radius: 14px;
+  }
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .ctaButtons .callBtn, .ctaButtons .whatsappBtn {
+    width: 100%;
+    justify-content: center;
+  }
 }
