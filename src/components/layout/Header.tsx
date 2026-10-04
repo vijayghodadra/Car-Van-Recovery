@@ -109,6 +109,7 @@ export default function Header() {
       href: '/areas-we-cover',
       icon: FilledMapPinIcon,
       subItems: [
+        { name: 'M11 Corridor', href: '/m11-corridor' },
         { name: 'M11', href: '/areas-we-cover/m11' },
         { name: 'Harlow', href: '/areas-we-cover/harlow' },
         { name: 'Stevenage', href: '/areas-we-cover/stevenage' },
