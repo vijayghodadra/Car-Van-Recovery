@@ -193,13 +193,26 @@ export default function Header() {
                 </Link>
                 
                 {link.subItems && (
-                  <div className={`${styles.dropdownMenu} ${link.subItems.length > 7 ? styles.dropdownMenuGrid : ''}`}>
+                  <div 
+                    className={`${styles.dropdownMenu} ${link.subItems.length > 7 ? styles.dropdownMenuGrid : ''}`}
+                    style={link.subItems.length > 7 ? {
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(2, 1fr)',
+                      minWidth: '380px',
+                      maxWidth: '440px',
+                      maxHeight: 'calc(100vh - 90px)',
+                      overflowY: 'auto'
+                    } : {
+                      maxHeight: 'calc(100vh - 90px)',
+                      overflowY: 'auto'
+                    }}
+                  >
                     {link.subItems.map(subItem => {
                       const SubIcon = (subItem as any).icon;
                       return (
                         <Link key={subItem.name} href={subItem.href} className={styles.dropdownItem}>
-                          {SubIcon && <SubIcon size={16} className={styles.dropdownItemIcon} />}
-                          {subItem.name}
+                          {SubIcon && <SubIcon size={15} className={styles.dropdownItemIcon} />}
+                          <span>{subItem.name}</span>
                         </Link>
                       );
                     })}

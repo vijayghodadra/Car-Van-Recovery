@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 };
 
 const locationsList = [
-  { name: 'M11', href: '/areas-we-cover/m11' },
+  { name: 'M11 Corridor', href: '/m11-corridor' },
   { name: 'Harlow', href: '/areas-we-cover/harlow' },
   { name: 'Stevenage', href: '/areas-we-cover/stevenage' },
   { name: "Bishop's Stortford", href: '/areas-we-cover/bishops-stortford' },
